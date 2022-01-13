@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #foto{
+            position: relative;
+        }
+        img#foto{
+          
+        }
+
+        svg{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 99%;
+            width: 97%;
+        }
+        svg circle{
+            fill: none;
+            pointer-events: all;
+            cursor: pointer;
+        } 
+       /* svg circle:hover {
+            animation: hoverElement 2s linear infinite;
+        }
+
+        @keyframes hoverElement { 
+            0% {
+                stroke: #000000;
+            }
+            50% {
+                stroke: #fc0000;
+            }
+            100% {
+                stroke: #000000; 
+            } 
+            
+} */ 
+        #children_name{
+            position: absolute;
+            z-index: 10;    
+            }
+    </style>
+</head>
+<body>
+    <div id="foto">
+        <div id="children_name"></div>
+        <img id="foto" src="Виньетка 3а-min.jpg">
+        <svg>
+            <circle class="children" data-name="Вася Пупкин" cx="220" cy="170" r="40"  stroke-width="1" fill="None"/>
+            <circle class="children" data-name="Василиса Пупкина" cx="90" cy="170" r="40"  stroke-width="1" fill="None"/>
+            <circle class="children" data-name="Василий" cx="350" cy="200" r="40"  stroke-width="1" fill="None"/>
+            <circle class="children" data-name="Василии3" cx="475" cy="165" r="40"  stroke-width="1" fill="None"/>
+            <circle class="children" data-name="Василис4" cx="555" cy="200" r="40"  stroke-width="1" fill="None"/>
+            <circle class="children" data-name="Василис5" cx="645" cy="170" r="40"  stroke-width="1" fill="None"/>
+            <circle class="children" data-name="Василиса6" cx="765" cy="195" r="40"  stroke-width="1" fill="None"/>
+            <circle class="children" data-name="Василиса7" cx="850" cy="200" r="40"  stroke-width="1" fill="None"/>
+            <circle class="children" data-name="Василиса8" cx="930" cy="180" r="40"  stroke-width="1" fill="None"/>
+            <circle class="children" data-name="Василиса9" cx="1050" cy="190" r="40"  stroke-width="1" fill="None"/>
+            <circle class="children" data-name="Василиса0" cx="1130" cy="250" r="40"  stroke-width="1" fill="None"/>
+            <circle class="children" data-name="Василиса1" cx="1105" cy="445" r="40"  stroke-width="1" fill="None"/>
+            <circle class="children" data-name="Василиса2" cx="535" cy="325" r="40"  stroke-width="1" fill="None"/>
+        </svg>
+    </div>
+</body>
+<script>
+    let children = document.querySelectorAll(".children")
+    children.forEach((item)=>{
+        item.addEventListener('click', function(){
+            let children_name = item.getAttribute('data-name');
+            let coord_x = item.getAttribute('cx');
+            let coord_y = item.getAttribute('cy');
+            let radius = item.getAttribute('r');
+            let children_div = document.getElementById('children_name');
+            children_div.innerHTML = children_name;
+            children_div.style.top = coord_y - radius - children_div.clientHeight + 'px';
+            children_div.style.left = coord_x - children_div.clientWidth/2 + 'px'; 
+        });
+    });
+    // document.addEventListener('click', function(event){
+    //     alert(event.clientX + ' ' + event.clientY )
+    // });
+    
+</script>
+</html>
