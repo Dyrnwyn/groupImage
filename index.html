@@ -9,8 +9,12 @@
         body{
             margin: 0;
             display: grid;
-            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-rows: auto;
             grid-template-columns: 1000px;
+            width: 100vw;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
         }
         #foto{
             position: relative;
@@ -55,9 +59,14 @@
     </style>
 </head>
 <body>
-<div></div>
+<!-- <div></div> -->
     <div id="foto">    
         <div id="children_name"></div>
+        <div id="children_card">
+            <div id=name></div>
+            <div id=foto></div>
+            <div id=message></div>
+        </div>
         <img id="foto" src="Виньетка 3а-min.jpg">
         <svg viewBox="0 0 1000 671">
             <circle class="children" data-name="Вася Пупкин" cx="185" cy="150" r="40"  stroke-width="1" fill="None"/>
@@ -75,12 +84,26 @@
             <circle class="children" data-name="Василиса2" cx="440" cy="260" r="40"  stroke-width="1" fill="None"/>
         </svg>    
     </div>
-<div></div>   
+<!-- <div></div>    -->
 </body>
 <script>
     let children = document.querySelectorAll(".children")
     let children_div = document.getElementById('children_name');
     function viewName(item){
+        let children_name = item.getAttribute('data-name');
+        let coord_x = item.getAttribute('cx');
+        let coord_y = item.getAttribute('cy');
+        let radius = item.getAttribute('r');   
+        children_div.style.display = 'block';     
+        children_div.innerHTML = children_name;
+        children_div.style.top = coord_y - radius - children_div.clientHeight + 'px';
+        children_div.style.left = coord_x - children_div.clientWidth/2 + 'px'; 
+        children_div.style.backgroundColor = 'azure';
+        children_div.style.padding = '5px';
+        children_div.style.border = '1px solid';
+        children_div.style.borderRadius = '7px';
+    };
+    function viewCard(item){
         let children_name = item.getAttribute('data-name');
         let coord_x = item.getAttribute('cx');
         let coord_y = item.getAttribute('cy');
