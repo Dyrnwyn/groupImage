@@ -58,8 +58,8 @@
             display: None;    
             }
         #children_card{
-            position: absolute;
-            z-index: 15;
+            
+            
             background-color: azure;
             border: 1px solid black;
             border-radius: 10px;
@@ -69,8 +69,22 @@
             -webkit-box-shadow: 5px 4px 3px 0px rgba(34, 60, 80, 0.2);
             -moz-box-shadow: 5px 4px 3px 0px rgba(34, 60, 80, 0.2);
             box-shadow: 5px 4px 3px 0px rgba(34, 60, 80, 0.2);
-            display: none;
+            
         }
+        #close_div{
+            display: none;
+            position: absolute;
+            z-index: 15;
+            width: min-content;
+        }
+        #close-button{
+            position: absolute;
+            width: 10%;
+            height: 10%;
+            top: -7%;
+            left: 100%;
+            cursor: pointer;
+        }     
         #children_card::-webkit-scrollbar{
             width: 0;
         }
@@ -91,11 +105,14 @@
 <!-- <div></div> -->
     <div id="foto">    
         <div id="children_name"></div>
-        <div id="children_card">
-            <div id=card_name></div>
-            <img id=card_student_foto src="">
-            <div id=card_message></div>
-        </div>
+        <div id="close_div">
+        <img id="close-button" src="close.svg" alt="">
+            <div id="children_card">            
+                <div id=card_name></div>
+                <img id=card_student_foto src="">
+                <div id=card_message></div>            
+            </div>   
+        </div>     
         <img id="group_foto" src="Виньетка 3а-min.jpg">
         <svg viewBox="0 0 1000 671">
             <circle class="children" data-name="Вася Пупкин" data-student-foto="student1.png" data-message="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque harum nobis ex tempora sunt minima qui temporibus velit quidem quaerat ipsum natus aperiam numquam optio ut est ad, porro odio?" cx="185" cy="150" r="40"  stroke-width="1" fill="None"/>
@@ -116,12 +133,13 @@
 <!-- <div></div>    -->
 </body>
 <script>
-    let children = document.querySelectorAll(".children")
+    let children = document.querySelectorAll(".children");
     let children_div = document.getElementById('children_name');
-    let card_div = document.getElementById('children_card')
-    let card_name_div = document.getElementById('card_name')
-    let card_student_foto_img = document.getElementById('card_student_foto')
-    let card_message_div = document.getElementById('card_message')
+    let card_div = document.getElementById('close_div');
+    let card_name_div = document.getElementById('card_name');
+    let card_student_foto_img = document.getElementById('card_student_foto');
+    let card_message_div = document.getElementById('card_message');
+    let close_button = document.getElementById('close-button');
 
     function viewName(item){
         let children_name = item.getAttribute('data-name');
@@ -167,6 +185,9 @@
         item.addEventListener('mouseout', function(){
             removeViewName(item);       
         });
+    });
+    close_button.addEventListener('click', function(){
+        card_div.style.display = 'none';
     });
     
     // document.addEventListener('click', function(event){
