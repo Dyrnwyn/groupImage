@@ -64,7 +64,7 @@
             border: 1px solid black;
             border-radius: 10px;
             width: min-content;
-            height: 275px;
+            height: 250px;
             overflow: auto;
             -webkit-box-shadow: 5px 4px 3px 0px rgba(34, 60, 80, 0.2);
             -moz-box-shadow: 5px 4px 3px 0px rgba(34, 60, 80, 0.2);
@@ -169,7 +169,7 @@
         card_message_div.innerHTML = card_message;
         console.log(coord_x + ' : ' +  coord_y);
         console.log(children_div.clientWidth/2 + ' : ' +  children_div.clientHeight);
-        card_div.style.top = coord_y - radius - children_div.clientHeight - 275 + 'px';
+        card_div.style.top = coord_y - radius - children_div.clientHeight - 250 + 'px';
         card_div.style.left = coord_x - children_div.clientWidth/2 + 'px'; 
         card_div.style.display = 'block';          
     };
