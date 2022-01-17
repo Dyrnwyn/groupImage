@@ -55,7 +55,7 @@
         #children_name{
             position: absolute;
             z-index: 10;
-            display: None;    
+            display: None; 
             }
         #children_card{
             
@@ -167,10 +167,8 @@
         card_name_div.innerHTML = card_name;
         card_student_foto_img.setAttribute('src', card_student_foto);
         card_message_div.innerHTML = card_message;
-        console.log(coord_x + ' : ' +  coord_y);
-        console.log(children_div.clientWidth/2 + ' : ' +  children_div.clientHeight);
-        card_div.style.top = coord_y - radius - children_div.clientHeight - 250 + 'px';
-        card_div.style.left = coord_x - children_div.clientWidth/2 + 'px'; 
+        card_div.style.top = coord_y - radius - children_div.clientHeight - 50 + 'px';
+        card_div.style.left = coord_x - children_div.clientWidth/2 + 35 + 'px'; 
         card_div.style.display = 'block';          
     };
     function removeViewName(item){
