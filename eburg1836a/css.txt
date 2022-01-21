@@ -1,0 +1,80 @@
+.наш_дружный_6__А__класс {
+  font-size: 98.498px;
+  font-family: "Monotype Corsiva";
+  color: rgb(53, 21, 19);
+  line-height: 1.2;
+  text-align: center;
+  -moz-transform: matrix( 0.28655003711161,0,0,0.28669331213016,0,0);
+  -webkit-transform: matrix( 0.28655003711161,0,0,0.28669331213016,0,0);
+  -ms-transform: matrix( 0.28655003711161,0,0,0.28669331213016,0,0);
+  position: absolute;
+  left: -302.361px;
+  top: 1.091px;
+  z-index: 36;
+}
+.МАОУ_СОШ_№183 {
+  font-size: 106.706px;
+  font-family: "Monotype Corsiva";
+  color: rgb(53, 21, 19);
+  line-height: 1.2;
+  text-align: center;
+  -moz-transform: matrix( 0.28655003711161,0,0,0.28669331213016,0,0);
+  -webkit-transform: matrix( 0.28655003711161,0,0,0.28669331213016,0,0);
+  -ms-transform: matrix( 0.28655003711161,0,0,0.28669331213016,0,0);
+  position: absolute;
+  left: -250.76px;
+  top: -40.735px;
+  z-index: 35;
+}
+._2021_2022_г_ {
+  font-size: 98.498px;
+  font-family: "Monotype Corsiva";
+  color: rgb(53, 21, 19);
+  line-height: 1.2;
+  text-align: center;
+  -moz-transform: matrix( 0.28446942309652,0,0,0.28461165780807,0,0);
+  -webkit-transform: matrix( 0.28446942309652,0,0,0.28461165780807,0,0);
+  -ms-transform: matrix( 0.28446942309652,0,0,0.28461165780807,0,0);
+  position: absolute;
+  left: 656.685px;
+  top: 586.901px;
+  z-index: 33;
+}
+.г__Екатеринбург__ {
+  font-size: 98.498px;
+  font-family: "Monotype Corsiva";
+  color: rgb(53, 21, 19);
+  line-height: 1.2;
+  text-align: center;
+  -moz-transform: matrix( 0.34730461686866,0,0,0.34747826917709,0,0);
+  -webkit-transform: matrix( 0.34730461686866,0,0,0.34747826917709,0,0);
+  -ms-transform: matrix( 0.34730461686866,0,0,0.34747826917709,0,0);
+  position: absolute;
+  left: 553.518px;
+  top: 553.091px;
+  z-index: 32;
+}
+<svg 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="270px" height="27px">
+<text kerning="auto" font-family="Myriad Pro" fill="rgb(0, 0, 0)" transform="matrix( 0.28655003711161, 0, 0, 0.28669331213016,0.79113806837049, 19.3772128986683)" font-size="98.498px"><tspan font-size="98.498px" font-family="Monotype Corsiva" fill="#351513">&#1085;&#1072;&#1096;&#32;&#1076;&#1088;&#1091;&#1078;&#1085;&#1099;&#1081;&#32;&#54;&#32;&#8220;&#1040;&#8221;&#32;&#1082;&#1083;&#1072;&#1089;&#1089;</tspan></text>
+</svg>
+<svg 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="228px" height="24px">
+<text kerning="auto" font-family="Myriad Pro" fill="rgb(0, 0, 0)" transform="matrix( 0.28655003711161, 0, 0, 0.28669331213016,0.30840727559868, 19.8840660835795)" font-size="106.706px"><tspan font-size="106.706px" font-family="Monotype Corsiva" fill="#351513">&#1052;&#1040;&#1054;&#1059;&#32;&#1057;&#1054;&#1064;&#32;&#8470;&#49;&#56;&#51;</tspan></text>
+</svg>
+<svg 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="126px" height="18px">
+<text kerning="auto" font-family="Myriad Pro" fill="rgb(0, 0, 0)" transform="matrix( 0.28446942309652, 0, 0, 0.28461165780807,0.61144623887492, 16.9490612967504)" font-size="98.498px"><tspan font-size="98.498px" font-family="Monotype Corsiva" fill="#351513">&#50;&#48;&#50;&#49;&#45;&#50;&#48;&#50;&#50;&#32;&#1075;&#46;</tspan></text>
+</svg>
+<svg 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="211px" height="33px">
+<text kerning="auto" font-family="Myriad Pro" fill="rgb(0, 0, 0)" transform="matrix( 0.34730461686866, 0, 0, 0.34747826917709,0.27295257190087, 23.6233045181303)" font-size="98.498px"><tspan font-size="98.498px" font-family="Monotype Corsiva" fill="#351513">&#1075;&#46;&#32;&#1045;&#1082;&#1072;&#1090;&#1077;&#1088;&#1080;&#1085;&#1073;&#1091;&#1088;&#1075;&#32;&#32;</tspan></text>
+</svg>

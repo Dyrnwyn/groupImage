@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            display: grid;
+            grid-template-rows: auto;
+            grid-template-columns: 1000px;
+            width: 100vw;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+        #foto{
+            position: relative;
+           
+        }
+        img#foto{
+          width: 100%;
+        }
+
+        svg{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+        }
+        svg circle{
+            fill: none;
+            pointer-events: all;
+            cursor: pointer;
+        } 
+       /* svg circle:hover {
+            animation: hoverElement 2s linear infinite;
+        }
+
+        @keyframes hoverElement { 
+            0% {
+                stroke: #000000;
+            }
+            50% {
+                stroke: #fc0000;
+            }
+            100% {
+                stroke: #000000; 
+            } 
+            
+} */ 
+        #children_name{
+            position: absolute;
+            z-index: 10;
+            display: None; 
+            }
+        #children_card{
+            
+            
+            background-color: azure;
+            border: 1px solid black;
+            border-radius: 10px;
+            width: min-content;
+            height: 250px;
+            overflow: auto;
+            -webkit-box-shadow: 5px 4px 3px 0px rgba(34, 60, 80, 0.2);
+            -moz-box-shadow: 5px 4px 3px 0px rgba(34, 60, 80, 0.2);
+            box-shadow: 5px 4px 3px 0px rgba(34, 60, 80, 0.2);
+            
+        }
+        #close_div{
+            display: none;
+            position: absolute;
+            z-index: 15;
+            width: min-content;
+        }
+        #close-button{
+            position: absolute;
+            width: 10%;
+            height: 10%;
+            top: -7%;
+            left: 100%;
+            cursor: pointer;
+        }     
+        #children_card::-webkit-scrollbar{
+            width: 0;
+        }
+        #card_student_foto{
+            width: 150px;
+        }
+        #card_name{
+            padding: 3px;
+            text-align: center;
+            border-bottom: 1px dotted black;
+        }
+        #card_message{
+            padding: 3px;
+        }
+    </style>
+</head>
+<body>
+<!-- <div></div> -->
+    <div id="foto">    
+        <div id="children_name"></div>
+        <div id="close_div">
+        <img id="close-button" src="close.svg" alt="">
+            <div id="children_card">            
+                <div id=card_name></div>
+                <img id=card_student_foto src="">
+                <div id=card_message></div>            
+            </div>   
+        </div>     
+        <img id="group_foto" src="eburg1836a/6_А_10106_without_text.jpg">
+        <svg viewBox="0 0 1000 671">
+            <circle class="children" data-name="Вася Пупкин" data-student-foto="eburg1836a/children/1.png" data-message="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque harum nobis ex tempora sunt minima qui temporibus velit quidem quaerat ipsum natus aperiam numquam optio ut est ad, porro odio?" cx="129" cy="144" r="40"  stroke-width="1" fill="None"/>
+            <circle class="children" data-name="Василиса Пупкина" data-student-foto="eburg1836a/children/2.png" data-message="Lorem ipsum dolor sit amet " cx="194" cy="145" r="40"  stroke-width="1" fill="None"/>
+            <circle class="children" data-name="Василий" data-student-foto="eburg1836a/children/3.png" data-message="Lorem ipsum dolor sit amet " cx="282" cy="153" r="40"  stroke-width="1" fill="None"/>
+            <circle class="children" data-name="Василии3" data-student-foto="eburg1836a/children/4.png" data-message="Lorem ipsum dolor sit amet " cx="367" cy="145" r="40"  stroke-width="1" fill="None"/>
+            <circle class="children" data-name="Василис4" data-student-foto="eburg1836a/children/5.png" data-message="Lorem ipsum dolor sit amet " cx="436" cy="147" r="40"  stroke-width="1" fill="None"/>
+            <circle class="children" data-name="Василис5" data-student-foto="eburg1836a/children/6.png" data-message="Lorem ipsum dolor sit amet " cx="510" cy="114" r="40"  stroke-width="1" fill="None"/>
+            <circle class="children" data-name="Василиса6" data-student-foto="eburg1836a/children/7.png" data-message="Lorem ipsum dolor sit amet " cx="617" cy="130" r="40"  stroke-width="1" fill="None"/>
+            <circle class="children" data-name="Василиса7" data-student-foto="eburg1836a/children/8.png" data-message="Lorem ipsum dolor sit amet " cx="713" cy="159" r="40"  stroke-width="1" fill="None"/>
+            <circle class="children" data-name="Василиса8" data-student-foto="eburg1836a/children/9.png" data-message="Lorem ipsum dolor sit amet " cx="801" cy="144" r="40"  stroke-width="1" fill="None"/>
+            <circle class="children" data-name="Василиса9" data-student-foto="eburg1836a/children/10.png" data-message="Lorem ipsum dolor sit amet " cx="922" cy="176" r="40"  stroke-width="1" fill="None"/>
+            <circle class="children" data-name="Василиса0" data-student-foto="eburg1836a/children/11.png" data-message="Lorem ipsum dolor sit amet " cx="944" cy="227" r="40"  stroke-width="1" fill="None"/>
+            <circle class="children" data-name="Василиса1" data-student-foto="eburg1836a/children/12.png" data-message="Lorem ipsum dolor sit amet " cx="856" cy="203" r="40"  stroke-width="1" fill="None"/>
+            <circle class="children" data-name="Василиса2" data-student-foto="eburg1836a/children/13.png" data-message="Lorem ipsum dolor sit amet " cx="767" cy="221" r="40"  stroke-width="1" fill="None"/>
+            <circle class="children" data-name="Василий" data-student-foto="eburg1836a/children/14.png" data-message="Lorem ipsum dolor sit amet " cx="683" cy="214" r="40"  stroke-width="1" fill="None"/>
+            <circle class="children" data-name="Василий" data-student-foto="eburg1836a/children/15.png" data-message="Lorem ipsum dolor sit amet " cx="630" cy="197" r="40"  stroke-width="1" fill="None"/>
+            <circle class="children" data-name="Василий" data-student-foto="eburg1836a/children/16.png" data-message="Lorem ipsum dolor sit amet " cx="543" cy="213" r="40"  stroke-width="1" fill="None"/>
+            <circle class="children" data-name="Василий" data-student-foto="eburg1836a/children/17.png" data-message="Lorem ipsum dolor sit amet " cx="454" cy="215" r="40"  stroke-width="1" fill="None"/>
+            <circle class="children" data-name="Василий" data-student-foto="eburg1836a/children/18.png" data-message="Lorem ipsum dolor sit amet " cx="388" cy="218" r="40"  stroke-width="1" fill="None"/>
+            <circle class="children" data-name="Василий" data-student-foto="eburg1836a/children/19.png" data-message="Lorem ipsum dolor sit amet " cx="286" cy="222" r="40"  stroke-width="1" fill="None"/>
+            <circle class="children" data-name="Василий" data-student-foto="eburg1836a/children/20.png" data-message="Lorem ipsum dolor sit amet " cx="197" cy="227" r="40"  stroke-width="1" fill="None"/>
+            <circle class="children" data-name="Василий" data-student-foto="eburg1836a/children/21.png" data-message="Lorem ipsum dolor sit amet " cx="100" cy="230" r="40"  stroke-width="1" fill="None"/>
+            <circle class="children" data-name="Василий" data-student-foto="eburg1836a/children/22.png" data-message="Lorem ipsum dolor sit amet " cx="141" cy="356" r="40"  stroke-width="1" fill="None"/>
+            <circle class="children" data-name="Василий" data-student-foto="eburg1836a/children/23.png" data-message="Lorem ipsum dolor sit amet " cx="207" cy="358" r="40"  stroke-width="1" fill="None"/>
+            <circle class="children" data-name="Василий" data-student-foto="eburg1836a/children/24.png" data-message="Lorem ipsum dolor sit amet " cx="307" cy="298" r="40"  stroke-width="1" fill="None"/>
+            <circle class="children" data-name="Василий" data-student-foto="eburg1836a/children/25.png" data-message="Lorem ipsum dolor sit amet " cx="374" cy="303" r="40"  stroke-width="1" fill="None"/>
+            <circle class="children" data-name="Василий" data-student-foto="eburg1836a/children/26.png" data-message="Lorem ipsum dolor sit amet " cx="474" cy="346" r="40"  stroke-width="1" fill="None"/>
+            <circle class="children" data-name="Василий" data-student-foto="eburg1836a/children/27.png" data-message="Lorem ipsum dolor sit amet " cx="537" cy="310" r="40"  stroke-width="1" fill="None"/>
+            <circle class="children" data-name="Василий" data-student-foto="eburg1836a/children/28.png" data-message="Lorem ipsum dolor sit amet " cx="603" cy="316" r="40"  stroke-width="1" fill="None"/>
+            <circle class="children" data-name="Василий" data-student-foto="eburg1836a/children/29.png" data-message="Lorem ipsum dolor sit amet " cx="694" cy="291" r="40"  stroke-width="1" fill="None"/>
+            <circle class="children" data-name="Василий" data-student-foto="eburg1836a/children/30.png" data-message="Lorem ipsum dolor sit amet " cx="763" cy="342" r="40"  stroke-width="1" fill="None"/>
+            <circle class="children" data-name="Василий" data-student-foto="eburg1836a/children/31.png" data-message="Lorem ipsum dolor sit amet " cx="890" cy="376" r="40"  stroke-width="1" fill="None"/>
+        </svg>    
+    </div>
+<!-- <div></div>    -->
+</body>
+<script>
+    let children = document.querySelectorAll(".children");
+    let children_div = document.getElementById('children_name');
+    let card_div = document.getElementById('close_div');
+    let card_name_div = document.getElementById('card_name');
+    let card_student_foto_img = document.getElementById('card_student_foto');
+    let card_message_div = document.getElementById('card_message');
+    let close_button = document.getElementById('close-button');
+
+    function viewName(item){
+        let children_name = item.getAttribute('data-name');
+        let coord_x = item.getAttribute('cx');
+        let coord_y = item.getAttribute('cy');
+        let radius = item.getAttribute('r');   
+        children_div.style.display = 'block';     
+        children_div.innerHTML = children_name;
+        children_div.style.top = coord_y - radius - children_div.clientHeight + 'px';
+        children_div.style.left = coord_x - children_div.clientWidth/2 + 'px'; 
+        children_div.style.backgroundColor = 'azure';
+        children_div.style.padding = '5px';
+        children_div.style.border = '1px solid';
+        children_div.style.borderRadius = '7px';
+    };
+
+    function viewCard(item){
+        children_div.style.display = 'none';
+        let card_name = item.getAttribute('data-name');
+        let card_student_foto = item.getAttribute('data-student-foto');
+        let card_message = item.getAttribute('data-message');
+        let coord_x = item.getAttribute('cx');
+        let coord_y = item.getAttribute('cy');
+        let radius = item.getAttribute('r');              
+        card_name_div.innerHTML = card_name;
+        card_student_foto_img.setAttribute('src', card_student_foto);
+        card_message_div.innerHTML = card_message;
+        card_div.style.top = coord_y - radius - children_div.clientHeight - 50 + 'px';
+        card_div.style.left = coord_x - children_div.clientWidth/2 + 35 + 'px'; 
+        card_div.style.display = 'block';          
+    };
+    function removeViewName(item){
+        let children_name = item.getAttribute('data-name');
+        children_div.style.display = 'None';
+    };
+    children.forEach((item)=>{
+        item.addEventListener('click', function(){
+            viewCard(item);       
+        });
+        item.addEventListener('mouseover', function(){
+            viewName(item);       
+        });
+        item.addEventListener('mouseout', function(){
+            removeViewName(item);       
+        });
+    });
+    close_button.addEventListener('click', function(){
+        card_div.style.display = 'none';
+    });
+    
+    // document.addEventListener('click', function(event){
+    //     let div_foto = document.getElementById("foto")
+    //     console.log(div_foto.offsetTop + ' ' + div_foto.offsetLeft)
+    //     console.log(event.clientY + ' ' + event.clientX)
+    //     console.log((event.clientX - div_foto.offsetLeft) + ' ' + (event.clientY - div_foto.offsetTop))
+    // });
+    
+</script>
+</html>
