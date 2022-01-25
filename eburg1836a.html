@@ -15,6 +15,16 @@
             height: 100vh;
             justify-content: center;
             align-items: center;
+            background-image: url("eburg1836a/bg.jpg");
+            background-size: cover;
+            
+        }
+        #group_foto{
+            border-radius: 25px;
+            border: snow 3px solid;
+            -webkit-box-shadow: 15px 15px 10px 2px rgba(34, 60, 80, 0.2);
+-moz-box-shadow: 15px 15px 10px 2px rgba(34, 60, 80, 0.2);
+box-shadow: 15px 15px 10px 2px rgba(34, 60, 80, 0.2);
         }
         #foto{
             position: relative;
@@ -99,10 +109,29 @@
         #card_message{
             padding: 3px;
         }
+        .text_in_foto{
+            position: absolute;
+        }
+        #town{
+            top: 680px;
+            left: 875px;
+        }
+        #years{
+            top: 680px;
+            left: 25px;
+        }
+        #school{
+            left: 45%;
+            top: -50px;
+        }
+        #the_class{
+            left: 45%;
+            top: -25px;
+        }
     </style>
 </head>
 <body>
-<!-- <div></div> -->
+
     <div id="foto">    
         <div id="children_name"></div>
         <div id="close_div">
@@ -112,7 +141,11 @@
                 <img id=card_student_foto src="">
                 <div id=card_message></div>            
             </div>   
-        </div>     
+        </div>   
+        <div class="text_in_foto" id="school">МАОУ СОШ №183</div>  
+        <div class="text_in_foto" id="the_class">Наш дружный "6А"</div>
+        <div class="text_in_foto" id="years">2021-2022</div>
+        <div class="text_in_foto" id="town">г. Екатеринбург</div>
         <img id="group_foto" src="eburg1836a/6_А_10106_without_text.jpg">
         <svg viewBox="0 0 1000 671">
             <circle class="children" data-name="Вася Пупкин" data-student-foto="eburg1836a/children/1.png" data-message="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque harum nobis ex tempora sunt minima qui temporibus velit quidem quaerat ipsum natus aperiam numquam optio ut est ad, porro odio?" cx="129" cy="144" r="40"  stroke-width="1" fill="None"/>
