@@ -135,6 +135,58 @@ box-shadow: 15px 15px 10px 2px rgba(34, 60, 80, 0.2);
             font-family: "Monotype Corsiva";
             src: url("monotypecorsiva.ttf") format("truetype");
         }
+        #menu{
+            display: block;
+            width: 25px;
+            height: 20px;
+            position: absolute;
+            top: 15px;
+            left: -5%;
+        }
+        #fotogallery{
+            position: absolute;
+            display: block;
+            
+            height: 324px;
+            overflow: hidden;
+            width: 150px;
+            border-right: 1px solid black;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+            border-radius: 5px;
+        }
+
+        .classfoto{
+            padding-right: 6px;
+            padding-top: 3px;
+            padding-bottom: 3px;
+            border-radius: 4px;
+            height: 100px;
+            position: relative;
+        }
+        .gallery-button{
+            position: absolute;
+            width: 20px;
+            height: 20px;
+        }
+        #open-gallery, #close-gallery{
+            left: 165px;
+            top: 150px;
+        }
+        #fotogallery-container{
+            position: absolute;
+            top: auto;
+            left: 0px;
+            height: 324px;
+        }
+        #next-foto{
+            top: 330px;
+            left: 65px;
+        }
+        #previous-gallery{
+            top: -25px;
+            left: 65px;
+        }
     </style>
 </head>
 <body>
@@ -154,6 +206,7 @@ box-shadow: 15px 15px 10px 2px rgba(34, 60, 80, 0.2);
         <div class="text_in_foto" id="years">2021-2022</div>
         <div class="text_in_foto" id="town">г. Екатеринбург</div>
         <img id="group_foto" src="eburg1836a/6_А_10106_without_text.jpg">
+        <img id="menu" src="eburg1836a/menu.svg">
         <svg viewBox="0 0 1000 671">
             <circle class="children" data-name="Некрасов Максим" data-student-foto="eburg1836a/children/1.png" data-message="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque harum nobis ex tempora sunt minima qui temporibus velit quidem quaerat ipsum natus aperiam numquam optio ut est ad, porro odio?" cx="129" cy="144" r="40"  stroke-width="1" fill="None"/>
             <circle class="children" data-name="Викулов Ваня" data-student-foto="eburg1836a/children/2.png" data-message="Lorem ipsum dolor sit amet " cx="194" cy="145" r="40"  stroke-width="1" fill="None"/>
@@ -188,7 +241,20 @@ box-shadow: 15px 15px 10px 2px rgba(34, 60, 80, 0.2);
             <circle class="children" data-name="Шевелев Стёпа" data-student-foto="eburg1836a/children/31.png" data-message="Lorem ipsum dolor sit amet " cx="890" cy="376" r="40"  stroke-width="1" fill="None"/>
         </svg>    
     </div>
-<!-- <div></div>    -->
+<div id="fotogallery-container">
+    <img src="eburg1836a/arrow-thick-right.svg" id="open-gallery" class="gallery-button">
+    <img src="eburg1836a/arrow-thick-left.svg" id="close-gallery" class="gallery-button">
+    <img src="eburg1836a/arrow-thick-bottom.svg" id="next-foto" class="gallery-button">
+    <img src="eburg1836a/arrow-thick-top.svg" id="previous-gallery" class="gallery-button">
+    <div id="fotogallery">
+        <img class="classfoto" src="eburg1836a/6_А_10106_with_text.jpg" alt="">
+        <img class="classfoto" src="eburg1836a/6_А_10106_with_text.jpg" alt="">
+        <img class="classfoto" src="eburg1836a/6_А_10106_with_text.jpg" alt="">
+        <img class="classfoto" src="eburg1836a/6_А_10106_with_text.jpg" alt="">
+        <img class="classfoto" src="eburg1836a/6_А_10106_with_text.jpg" alt="">
+    </div>
+</div>
+
 </body>
 <script>
     let children = document.querySelectorAll(".children");
