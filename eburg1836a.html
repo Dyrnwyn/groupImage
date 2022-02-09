@@ -144,16 +144,16 @@ box-shadow: 15px 15px 10px 2px rgba(34, 60, 80, 0.2);
             left: -5%;
         }
         #fotogallery{
-            position: absolute;
+            
             display: block;
-            background-color: azure;
+            
             height: 96vh;
             overflow: hidden;
             width: min-content;
-            border-right: 1px solid black;
+            /* border-right: 1px solid black;
             border-top: 1px solid black;
-            border-bottom: 1px solid black;
-            border-radius: 5px;
+            border-bottom: 1px solid black; */
+            
         }
 
         .classfoto{
@@ -179,7 +179,11 @@ box-shadow: 15px 15px 10px 2px rgba(34, 60, 80, 0.2);
             top: auto;
             left: 0px;
             height: 100vh;
-            background-color: antiquewhite;
+            background-color: azure;
+            border-radius: 5px;
+            -webkit-box-shadow: 8px 0px 4px 0px rgba(34, 60, 80, 0.2);
+            -moz-box-shadow: 8px 0px 4px 0px rgba(34, 60, 80, 0.2);
+            box-shadow: 8px 0px 4px 0px rgba(34, 60, 80, 0.2);
         }
         #next-foto{
             top: 330px;
@@ -188,6 +192,14 @@ box-shadow: 15px 15px 10px 2px rgba(34, 60, 80, 0.2);
         #previous-gallery{
             top: -25px;
             left: 65px;
+        }
+        .years-on-preview{
+            position: absolute;
+            display: block;
+            position: relative;
+        }
+        .container-classfoto{
+            
         }
     </style>
 </head>
@@ -249,17 +261,17 @@ box-shadow: 15px 15px 10px 2px rgba(34, 60, 80, 0.2);
     <img src="eburg1836a/arrow-thick-bottom.svg" id="next-foto" class="gallery-button">
     <img src="eburg1836a/arrow-thick-top.svg" id="previous-gallery" class="gallery-button">
     <div id="fotogallery">
-        <div><img class="classfoto" src="eburg1836a/nonefoto-min.jpg" alt=""><span>2016-2017</span></div>        
-        <div><img class="classfoto" src="eburg1836a/nonefoto-min.jpg" alt=""><span>2017-2018</span></div> 
-        <div><img class="classfoto" src="eburg1836a/nonefoto-min.jpg" alt=""><span>2018-2019</span></div>        
-        <div><img class="classfoto" src="eburg1836a/nonefoto-min.jpg" alt=""><span>2019-2020</span></div> 
-        <div><img class="classfoto" src="eburg1836a/nonefoto-min.jpg" alt=""><span>2020-2021</span></div>  
-        <div><img class="classfoto" src="eburg1836a/6_А_10106_with_text.jpg" alt=""><span>2021-2022</span></div>
-        <div><img class="classfoto" src="eburg1836a/nonefoto-min.jpg" alt=""><span>2022-2023</span></div>  
-        <div><img class="classfoto" src="eburg1836a/nonefoto-min.jpg" alt=""><span>2023-2024</span></div>  
-        <div><img class="classfoto" src="eburg1836a/nonefoto-min.jpg" alt=""><span>2025-2026</span></div>  
-        <div><img class="classfoto" src="eburg1836a/nonefoto-min.jpg" alt=""><span>2026-2027</span></div>  
-        <div><img class="classfoto" src="eburg1836a/nonefoto-min.jpg" alt=""><span>2027-2028</span></div>  
+        <div class="container-classfoto"><img class="classfoto" src="eburg1836a/nonefoto-min.jpg" alt=""><span class="years-on-preview">2016-2017</span></div>        
+        <div class="container-classfoto"><img class="classfoto" src="eburg1836a/nonefoto-min.jpg" alt=""><span class="years-on-preview">2017-2018</span></div> 
+        <div class="container-classfoto"><img class="classfoto" src="eburg1836a/nonefoto-min.jpg" alt=""><span class="years-on-preview">2018-2019</span></div>        
+        <div class="container-classfoto"><img class="classfoto" src="eburg1836a/nonefoto-min.jpg" alt=""><span class="years-on-preview">2019-2020</span></div> 
+        <div class="container-classfoto"><img class="classfoto" src="eburg1836a/nonefoto-min.jpg" alt=""><span class="years-on-preview">2020-2021</span></div>  
+        <div class="container-classfoto"><img class="classfoto" src="eburg1836a/6_А_10106_with_text.jpg" alt=""><span class="years-on-preview">2021-2022</span></div>
+        <div class="container-classfoto"><img class="classfoto" src="eburg1836a/nonefoto-min.jpg" alt=""><span class="years-on-preview">2022-2023</span></div>  
+        <div class="container-classfoto"><img class="classfoto" src="eburg1836a/nonefoto-min.jpg" alt=""><span class="years-on-preview">2023-2024</span></div>  
+        <div class="container-classfoto"><img class="classfoto" src="eburg1836a/nonefoto-min.jpg" alt=""><span class="years-on-preview">2025-2026</span></div>  
+        <div class="container-classfoto"><img class="classfoto" src="eburg1836a/nonefoto-min.jpg" alt=""><span class="years-on-preview">2026-2027</span></div>  
+        <div class="container-classfoto"><img class="classfoto" src="eburg1836a/nonefoto-min.jpg" alt=""><span class="years-on-preview">2027-2028</span></div>  
     </div>
 </div>
 
