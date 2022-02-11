@@ -1,0 +1,323 @@
+body{
+    margin: 0;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1000px;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-image: url("bg.jpg");
+    background-size: cover;
+    justify-items: center;
+}
+#group_foto{
+    border-radius: 25px;
+    border: snow 3px solid;
+    -webkit-box-shadow: 15px 15px 10px 2px rgba(34, 60, 80, 0.2);
+-moz-box-shadow: 15px 15px 10px 2px rgba(34, 60, 80, 0.2);
+box-shadow: 15px 15px 10px 2px rgba(34, 60, 80, 0.2);
+}
+#foto{
+    position: relative;
+   
+}
+img#foto{
+  width: 100%;
+}
+
+svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+svg circle{
+    fill: none;
+    pointer-events: all;
+    cursor: pointer;
+} 
+/* svg circle:hover {
+    animation: hoverElement 2s linear infinite;
+}
+
+@keyframes hoverElement { 
+    0% {
+        stroke: #000000;
+    }
+    50% {
+        stroke: #fc0000;
+    }
+    100% {
+        stroke: #000000; 
+    } 
+    
+} */ 
+#children_name{
+    position: absolute;
+    z-index: 10;
+    display: None; 
+    }
+#children_card{
+    
+    
+    background-color: azure;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: min-content;
+    height: 250px;
+    overflow: auto;
+    -webkit-box-shadow: 5px 4px 3px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 5px 4px 3px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 5px 4px 3px 0px rgba(34, 60, 80, 0.2);
+    
+}
+#close_div{
+    display: none;
+    position: absolute;
+    z-index: 15;
+    width: min-content;
+}
+#close-button{
+    position: absolute;
+    width: 10%;
+    height: 10%;
+    top: -7%;
+    left: 100%;
+    cursor: pointer;
+}     
+#children_card::-webkit-scrollbar{
+    width: 0;
+}
+#card_student_foto{
+    width: 150px;
+}
+#card_name{
+    padding: 3px;
+    text-align: center;
+    border-bottom: 1px dotted black;
+}
+#card_message{
+    padding: 3px;
+}
+.text_in_foto{
+    position: absolute;
+    font-family: "Monotype Corsiva";
+    font-size: 1.8em;
+    text-shadow: 1px 1px 10px black;
+}
+#town{
+    top: 680px;
+    left: 800px;
+}
+#years{
+    top: 680px;
+    left: 25px;
+}
+#school{
+    left: 1%;
+    top: -35px;
+}
+#the_class{
+    left: 77%;
+    top: -35px;
+}
+@font-face {
+    font-family: "Monotype Corsiva";
+    src: url("monotypecorsiva.ttf") format("truetype");
+}
+#menu{
+    display: block;
+    width: 25px;
+    height: 20px;
+    position: absolute;
+    top: 15px;
+    left: -5%;
+}
+/*-----------Боковая левая панель с групповыми-------------*/
+#groupfoto-panel{
+    display: grid;
+    grid-template-areas: 
+    "groupfoto-container open-groupfoto-button";
+    grid-template-columns: 162px 20px;
+    grid-gap: 2px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    background-color: azure;
+    border-radius: 5px;
+    -webkit-box-shadow: 8px 0px 4px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 8px 0px 4px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 8px 0px 4px 0px rgba(34, 60, 80, 0.2);
+    z-index: 20;
+}
+#groupfoto-container{
+    display: grid;
+    grid-area: groupfoto-container;
+    grid-template-rows: 3vh 94vh 3vh;
+    grid-template-areas: 
+    "previous-groupfoto-button"
+    "groupfoto"
+    "next-groupfoto-button";
+}
+#groupfoto{            
+    display: block;
+    grid-area: groupfoto;
+    overflow: hidden;
+    width: min-content;          
+}
+#groupfoto div:first-child img{
+    margin-top: 6px;
+}
+#open-groupfoto-button{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-area: open-groupfoto-button;
+    border-left: 1px dotted;
+}
+#open-groupfoto-button:hover, #next-groupfoto-button:hover, #previous-groupfoto-button:hover{
+    -webkit-box-shadow: 0px 2px 4px 2px rgba(34, 60, 80, 0.2) inset;
+    -moz-box-shadow: 0px 2px 4px 2px rgba(34, 60, 80, 0.2) inset;
+    box-shadow: 0px 2px 4px 2px rgba(34, 60, 80, 0.2) inset;
+}
+.imggroupfoto{
+    margin-right: 6px;
+    margin-left: 6px;
+    margin-top: 14px;
+    border-radius: 4px;
+    height: 100px;
+    position: relative;
+    display: block;
+    -webkit-box-shadow: -1px -1px 3px 0px rgba(34, 60, 80, 0.6);
+    -moz-box-shadow: -1px -1px 3px 0px rgba(34, 60, 80, 0.6);
+    box-shadow: -1px -1px 3px 0px rgba(34, 60, 80, 0.6);
+
+}        
+.groupfoto-button, .archive-button{
+    width: 20px;
+    height: 20px;
+}
+#open-groupfoto{
+    display: none;
+}
+#next-groupfoto-button{
+    grid-area: next-groupfoto-button;
+    justify-content: center;
+    display: grid;
+    border-top: 1px dotted;
+    align-items: center;
+}
+#previous-groupfoto-button{
+    grid-area: previous-groupfoto-button;
+    justify-content: center;
+    display: grid;
+    border-bottom: 1px dotted;
+    align-items: center;
+}
+.years-on-preview{
+    display: block;
+    position: absolute;
+    z-index: 5;
+    top: 80px;
+    left: 80px;
+    background-color: gainsboro;
+}
+.container-groupfoto{
+    position: relative;
+}
+#new-order:hover{
+    background-color: linen;
+}
+/*----------------------Боковая панель архива событий-----------------*/
+#archive-panel{
+    display: grid;
+    grid-template-areas: 
+    "open-archive-button archive-container";
+    grid-template-columns: 20px 162px;
+    grid-gap: 2px;
+    position: absolute;
+    top: 0px;
+    right: 0;
+    height: 100vh;
+    background-color: azure;
+    border-radius: 5px;
+    -webkit-box-shadow: 8px 0px 4px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 8px 0px 4px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 8px 0px 4px 0px rgba(34, 60, 80, 0.2);
+    z-index: 20;
+}
+#archive-container{            
+    display: grid;
+    grid-area: archive-container;
+    grid-template-areas: 
+    "previous-archive-button"
+    "archive"
+    "next-archive-button";
+    grid-template-rows: 3vh 94vh 3vh;
+    overflow: hidden;
+    width: min-content;          
+}
+#archive{
+    grid-area: archive;
+}
+#archive div:first-child img:first-child{
+    margin-top: 6px;
+}
+#open-archive-button{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-area: open-archive-button;
+    border-right: 1px dotted;
+}
+#open-archive-button:hover, #next-archive-button:hover, #previous-archive-button:hover{
+    -webkit-box-shadow: 0px 2px 4px 2px rgba(34, 60, 80, 0.2) inset;
+    -moz-box-shadow: 0px 2px 4px 2px rgba(34, 60, 80, 0.2) inset;
+    box-shadow: 0px 2px 4px 2px rgba(34, 60, 80, 0.2) inset;
+}
+#open-archive{
+    display: none;
+}
+.container-archivefoto{
+    position: relative;
+}
+#next-archive-button{
+    grid-area: next-archive-button;
+    justify-content: center;
+    display: grid;
+    border-top: 1px dotted;
+    align-items: center;
+}
+#previous-archive-button{
+    grid-area: previous-archive-button;
+    justify-content: center;
+    display: grid;
+    border-bottom: 1px dotted;
+    align-items: center;
+}
+.text-on-preview{
+    display: block;
+    position: absolute;
+    z-index: 5;
+    top: 80px;
+    left: 80px;
+    background-color: gainsboro;
+}
+.imgarchivefoto{
+    margin-right: 6px;
+    margin-left: 6px;
+    margin-top: 14px;
+    border-radius: 4px;
+    height: 100px;
+    position: relative;
+    display: block;
+    -webkit-box-shadow: 1px -1px 3px 0px rgba(34, 60, 80, 0.6);
+    -moz-box-shadow: 1px -1px 3px 0px rgba(34, 60, 80, 0.6);
+    box-shadow: 1px -1px 3px 0px rgba(34, 60, 80, 0.6);
+}
+#archive div:first-child img{
+    margin-top: 6px;
+}

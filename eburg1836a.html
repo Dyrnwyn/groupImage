@@ -4,384 +4,96 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="eburg1836a/main.css">
     <title>Document</title>
-    <style>
-        body{
-            margin: 0;
-            display: grid;
-            grid-template-rows: auto;
-            grid-template-columns: 1000px;
-            width: 100vw;
-            height: 100vh;
-            justify-content: center;
-            align-items: center;
-            background-image: url("eburg1836a/bg.jpg");
-            background-size: cover;
-            justify-items: center;
-        }
-        #group_foto{
-            border-radius: 25px;
-            border: snow 3px solid;
-            -webkit-box-shadow: 15px 15px 10px 2px rgba(34, 60, 80, 0.2);
--moz-box-shadow: 15px 15px 10px 2px rgba(34, 60, 80, 0.2);
-box-shadow: 15px 15px 10px 2px rgba(34, 60, 80, 0.2);
-        }
-        #foto{
-            position: relative;
-           
-        }
-        img#foto{
-          width: 100%;
-        }
-
-        svg{
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-        }
-        svg circle{
-            fill: none;
-            pointer-events: all;
-            cursor: pointer;
-        } 
-       /* svg circle:hover {
-            animation: hoverElement 2s linear infinite;
-        }
-
-        @keyframes hoverElement { 
-            0% {
-                stroke: #000000;
-            }
-            50% {
-                stroke: #fc0000;
-            }
-            100% {
-                stroke: #000000; 
-            } 
-            
-} */ 
-        #children_name{
-            position: absolute;
-            z-index: 10;
-            display: None; 
-            }
-        #children_card{
-            
-            
-            background-color: azure;
-            border: 1px solid black;
-            border-radius: 10px;
-            width: min-content;
-            height: 250px;
-            overflow: auto;
-            -webkit-box-shadow: 5px 4px 3px 0px rgba(34, 60, 80, 0.2);
-            -moz-box-shadow: 5px 4px 3px 0px rgba(34, 60, 80, 0.2);
-            box-shadow: 5px 4px 3px 0px rgba(34, 60, 80, 0.2);
-            
-        }
-        #close_div{
-            display: none;
-            position: absolute;
-            z-index: 15;
-            width: min-content;
-        }
-        #close-button{
-            position: absolute;
-            width: 10%;
-            height: 10%;
-            top: -7%;
-            left: 100%;
-            cursor: pointer;
-        }     
-        #children_card::-webkit-scrollbar{
-            width: 0;
-        }
-        #card_student_foto{
-            width: 150px;
-        }
-        #card_name{
-            padding: 3px;
-            text-align: center;
-            border-bottom: 1px dotted black;
-        }
-        #card_message{
-            padding: 3px;
-        }
-        .text_in_foto{
-            position: absolute;
-            font-family: "Monotype Corsiva";
-            font-size: 1.8em;
-            text-shadow: 1px 1px 10px black;
-        }
-        #town{
-            top: 680px;
-            left: 800px;
-        }
-        #years{
-            top: 680px;
-            left: 25px;
-        }
-        #school{
-            left: 1%;
-            top: -35px;
-        }
-        #the_class{
-            left: 77%;
-            top: -35px;
-        }
-        @font-face {
-            font-family: "Monotype Corsiva";
-            src: url("monotypecorsiva.ttf") format("truetype");
-        }
-        #menu{
-            display: block;
-            width: 25px;
-            height: 20px;
-            position: absolute;
-            top: 15px;
-            left: -5%;
-        }
-        /*-----------Боковая левая панель-------------*/
-        #fotogallery-container{
-            display: grid;
-            grid-template-areas: 
-            "previous-button open-gallery-container"
-            "fotogallery open-gallery-container"
-            "next-button open-gallery-container";
-            grid-template-rows: 1fr 94vh 1fr;
-            grid-template-columns: 162px 20px;
-            grid-gap: 2px;
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            height: 100vh;
-            background-color: azure;
-            border-radius: 5px;
-            -webkit-box-shadow: 8px 0px 4px 0px rgba(34, 60, 80, 0.2);
-            -moz-box-shadow: 8px 0px 4px 0px rgba(34, 60, 80, 0.2);
-            box-shadow: 8px 0px 4px 0px rgba(34, 60, 80, 0.2);
-        }
-        #fotogallery{            
-            display: block;
-            grid-area: fotogallery;
-            /* height: 90vh; */
-            overflow: hidden;
-            width: min-content;          
-        }
-        #fotogallery div:first-child img:first-child{
-            margin-top: 6px;
-        }
-        #open-gallery-container{
-            display: grid;
-            align-items: center;
-            justify-content: center;
-            grid-area: open-gallery-container;
-            border-left: 1px dotted;
-        }
-        #open-gallery-container:hover, #next-button:hover, #previous-button:hover{
-            -webkit-box-shadow: 0px 2px 4px 2px rgba(34, 60, 80, 0.2) inset;
-            -moz-box-shadow: 0px 2px 4px 2px rgba(34, 60, 80, 0.2) inset;
-            box-shadow: 0px 2px 4px 2px rgba(34, 60, 80, 0.2) inset;
-        }
-        .classfoto, .archivefoto{
-            margin-right: 6px;
-            margin-left: 6px;
-            margin-top: 14px;
-            /* margin-bottom: 5px; */
-            border-radius: 4px;
-            height: 100px;
-            position: relative;
-            display: block;
-            -webkit-box-shadow: -1px -1px 3px 0px rgba(34, 60, 80, 0.6);
-            -moz-box-shadow: -1px -1px 3px 0px rgba(34, 60, 80, 0.6);
-            box-shadow: -1px -1px 3px 0px rgba(34, 60, 80, 0.6);
-
-        }        
-        .gallery-button{
-            width: 20px;
-            height: 20px;
-        }
-        #open-gallery{
-            display: none;
-        }
-        #next-button{
-            grid-area: next-button;
-            justify-content: center;
-            display: grid;
-            border-top: 1px dotted;
-            align-items: center;
-        }
-        #previous-button{
-            grid-area: previous-button;
-            justify-content: center;
-            display: grid;
-            border-bottom: 1px dotted;
-            align-items: center;
-        }
-        .years-on-preview{
-            display: block;
-            position: absolute;
-            z-index: 5;
-            top: 80px;
-            left: 80px;
-            background-color: gainsboro;
-        }
-        .container-classfoto{
-            position: relative;
-        }
-        #new-order:hover{
-            background-color: linen;
-        }
-/*----------------------Фото архив-----------------*/
-#archive-container{
-            display: grid;
-            grid-template-areas: 
-            "open-archive-container previous-archive-button"
-            "open-archive-container archive"
-            "open-archive-container next-archive-button";
-            grid-template-rows: 1fr 94vh 1fr;
-            grid-template-columns: 20px 162px;
-            grid-gap: 2px;
-            position: absolute;
-            top: 0px;
-            right: 0;
-            height: 100vh;
-            background-color: azure;
-            border-radius: 5px;
-            -webkit-box-shadow: 8px 0px 4px 0px rgba(34, 60, 80, 0.2);
-            -moz-box-shadow: 8px 0px 4px 0px rgba(34, 60, 80, 0.2);
-            box-shadow: 8px 0px 4px 0px rgba(34, 60, 80, 0.2);
-        }
-        #archive{            
-            display: block;
-            grid-area: archive;
-            /* height: 90vh; */
-            overflow: hidden;
-            width: min-content;          
-        }
-        #archive div:first-child img:first-child{
-            margin-top: 6px;
-        }
-        #open-archive-container{
-            display: grid;
-            align-items: center;
-            justify-content: center;
-            grid-area: open-archive-container;
-            border-right: 1px dotted;
-        }
-        #open-archive-container:hover, #next-archive-button:hover, #previous-archive-button:hover{
-            -webkit-box-shadow: 0px 2px 4px 2px rgba(34, 60, 80, 0.2) inset;
-            -moz-box-shadow: 0px 2px 4px 2px rgba(34, 60, 80, 0.2) inset;
-            box-shadow: 0px 2px 4px 2px rgba(34, 60, 80, 0.2) inset;
-        }
-        .archive-button{
-            width: 20px;
-            height: 20px;
-        }
-        #open-archive{
-            display: none;
-        }
-        .container-archivefoto{
-            position: relative;
-        }
-        #next-archive-button{
-            grid-area: next-archive-button;
-            justify-content: center;
-            display: grid;
-            border-top: 1px dotted;
-            align-items: center;
-        }
-        #previous-archive-button{
-            grid-area: previous-archive-button;
-            justify-content: center;
-            display: grid;
-            border-bottom: 1px dotted;
-            align-items: center;
-        }
-    </style>
 </head>
 <body>
 
-    <div id="foto">    
-        <div id="children_name"></div>
-        <div id="close_div">
-        <img id="close-button" src="close.svg" alt="">
-            <div id="children_card">            
-                <div id=card_name></div>
-                <img id=card_student_foto src="">
-                <div id=card_message></div>            
-            </div>   
+<div id="foto">    
+    <div id="children_name"></div>
+    <div id="close_div">
+    <img id="close-button" src="close.svg" alt="">
+        <div id="children_card">            
+            <div id=card_name></div>
+            <img id=card_student_foto src="">
+            <div id=card_message></div>            
         </div>   
-        <div class="text_in_foto" id="school">МАОУ СОШ №183</div>  
-        <div class="text_in_foto" id="the_class">Наш дружный "6А"</div>
-        <div class="text_in_foto" id="years">2021-2022</div>
-        <div class="text_in_foto" id="town">г. Екатеринбург</div>
-        <img id="group_foto" src="eburg1836a/6_А_10106_without_text.jpg">
-        <img id="menu" src="eburg1836a/menu.svg">
-        <svg viewBox="0 0 1000 671">
-            <circle class="children" data-name="Некрасов Максим" data-student-foto="eburg1836a/children/1.png" data-message="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque harum nobis ex tempora sunt minima qui temporibus velit quidem quaerat ipsum natus aperiam numquam optio ut est ad, porro odio?" cx="129" cy="144" r="40"  stroke-width="1" fill="None"/>
-            <circle class="children" data-name="Викулов Ваня" data-student-foto="eburg1836a/children/2.png" data-message="Lorem ipsum dolor sit amet " cx="194" cy="145" r="40"  stroke-width="1" fill="None"/>
-            <circle class="children" data-name="Кузьмин Кирилл" data-student-foto="eburg1836a/children/3.png" data-message="Lorem ipsum dolor sit amet " cx="282" cy="153" r="40"  stroke-width="1" fill="None"/>
-            <circle class="children" data-name="Миронова Маша" data-student-foto="eburg1836a/children/4.png" data-message="Lorem ipsum dolor sit amet " cx="367" cy="145" r="40"  stroke-width="1" fill="None"/>
-            <circle class="children" data-name="Киян Дима" data-student-foto="eburg1836a/children/5.png" data-message="Lorem ipsum dolor sit amet " cx="436" cy="147" r="40"  stroke-width="1" fill="None"/>
-            <circle class="children" data-name="Лапшанова Светлана Альбертовна" data-student-foto="eburg1836a/children/6.png" data-message="Lorem ipsum dolor sit amet " cx="510" cy="114" r="40"  stroke-width="1" fill="None"/>
-            <circle class="children" data-name="Рахматулин Влад" data-student-foto="eburg1836a/children/7.png" data-message="Lorem ipsum dolor sit amet " cx="617" cy="130" r="40"  stroke-width="1" fill="None"/>
-            <circle class="children" data-name="Амарян Дияр" data-student-foto="eburg1836a/children/8.png" data-message="Lorem ipsum dolor sit amet " cx="713" cy="159" r="40"  stroke-width="1" fill="None"/>
-            <circle class="children" data-name="Змеев Алексей" data-student-foto="eburg1836a/children/9.png" data-message="Lorem ipsum dolor sit amet " cx="801" cy="144" r="40"  stroke-width="1" fill="None"/>
-            <circle class="children" data-name="Батчаев Ислам" data-student-foto="eburg1836a/children/10.png" data-message="Lorem ipsum dolor sit amet " cx="922" cy="176" r="40"  stroke-width="1" fill="None"/>
-            <circle class="children" data-name="Соколов Тихон" data-student-foto="eburg1836a/children/11.png" data-message="Lorem ipsum dolor sit amet " cx="944" cy="227" r="40"  stroke-width="1" fill="None"/>
-            <circle class="children" data-name="Силина Вика" data-student-foto="eburg1836a/children/12.png" data-message="Lorem ipsum dolor sit amet " cx="856" cy="203" r="40"  stroke-width="1" fill="None"/>
-            <circle class="children" data-name="Катаева Вика" data-student-foto="eburg1836a/children/13.png" data-message="Lorem ipsum dolor sit amet " cx="767" cy="221" r="40"  stroke-width="1" fill="None"/>
-            <circle class="children" data-name="Абдиламидова Ясмина" data-student-foto="eburg1836a/children/15.png" data-message="Lorem ipsum dolor sit amet " cx="683" cy="214" r="40"  stroke-width="1" fill="None"/>
-            <circle class="children" data-name="Климова Вероника" data-student-foto="eburg1836a/children/14.png" data-message="Lorem ipsum dolor sit amet " cx="630" cy="197" r="40"  stroke-width="1" fill="None"/>
-            <circle class="children" data-name="Рогожкин Денис" data-student-foto="eburg1836a/children/16.png" data-message="Lorem ipsum dolor sit amet " cx="543" cy="213" r="40"  stroke-width="1" fill="None"/>
-            <circle class="children" data-name="Борисов Иван" data-student-foto="eburg1836a/children/17.png" data-message="Lorem ipsum dolor sit amet " cx="454" cy="215" r="40"  stroke-width="1" fill="None"/>
-            <circle class="children" data-name="Вдовин Артём" data-student-foto="eburg1836a/children/18.png" data-message="Lorem ipsum dolor sit amet " cx="388" cy="218" r="40"  stroke-width="1" fill="None"/>
-            <circle class="children" data-name="Лаврентьев Егор" data-student-foto="eburg1836a/children/19.png" data-message="Lorem ipsum dolor sit amet " cx="286" cy="222" r="40"  stroke-width="1" fill="None"/>
-            <circle class="children" data-name="Ярушина София" data-student-foto="eburg1836a/children/20.png" data-message="Lorem ipsum dolor sit amet " cx="197" cy="227" r="40"  stroke-width="1" fill="None"/>
-            <circle class="children" data-name="Хабибрахманова Диана" data-student-foto="eburg1836a/children/21.png" data-message="Lorem ipsum dolor sit amet " cx="100" cy="230" r="40"  stroke-width="1" fill="None"/>
-            <circle class="children" data-name="Андриеш Стелла" data-student-foto="eburg1836a/children/22.png" data-message="Lorem ipsum dolor sit amet " cx="141" cy="356" r="40"  stroke-width="1" fill="None"/>
-            <circle class="children" data-name="Раимбабаева Мадина" data-student-foto="eburg1836a/children/23.png" data-message="Lorem ipsum dolor sit amet " cx="207" cy="358" r="40"  stroke-width="1" fill="None"/>
-            <circle class="children" data-name="Эрболсунова Айназик" data-student-foto="eburg1836a/children/24.png" data-message="Lorem ipsum dolor sit amet " cx="307" cy="298" r="40"  stroke-width="1" fill="None"/>
-            <circle class="children" data-name="Андык Эвелина" data-student-foto="eburg1836a/children/25.png" data-message="Lorem ipsum dolor sit amet " cx="374" cy="303" r="40"  stroke-width="1" fill="None"/>
-            <circle class="children" data-name="Умурзакова Мадина" data-student-foto="eburg1836a/children/26.png" data-message="Lorem ipsum dolor sit amet " cx="474" cy="346" r="40"  stroke-width="1" fill="None"/>
-            <circle class="children" data-name="Паночкина Полина" data-student-foto="eburg1836a/children/27.png" data-message="Lorem ipsum dolor sit amet " cx="537" cy="310" r="40"  stroke-width="1" fill="None"/>
-            <circle class="children" data-name="Свалявин Кирилл" data-student-foto="eburg1836a/children/28.png" data-message="Lorem ipsum dolor sit amet " cx="603" cy="316" r="40"  stroke-width="1" fill="None"/>
-            <circle class="children" data-name="Филипповский Никита" data-student-foto="eburg1836a/children/29.png" data-message="Lorem ipsum dolor sit amet " cx="694" cy="291" r="40"  stroke-width="1" fill="None"/>
-            <circle class="children" data-name="Хайбулин Максим" data-student-foto="eburg1836a/children/30.png" data-message="Lorem ipsum dolor sit amet " cx="763" cy="342" r="40"  stroke-width="1" fill="None"/>
-            <circle class="children" data-name="Шевелев Стёпа" data-student-foto="eburg1836a/children/31.png" data-message="Lorem ipsum dolor sit amet " cx="890" cy="376" r="40"  stroke-width="1" fill="None"/>
-        </svg>    
-    </div>
-
-<div id="fotogallery-container">
-    <div id="open-gallery-container">
-        <img src="eburg1836a/arrow-thick-right.svg" id="open-gallery" class="archive-button">
-        <img src="eburg1836a/arrow-thick-left.svg" id="close-gallery" class="archive-button">
-    </div>
-    <div id="previous-button"><img src="eburg1836a/arrow-thick-top.svg" id="previous-foto" class="archive-button"></div>
-    <div id="fotogallery">        
-        <div class="container-classfoto"><img class="classfoto" src="eburg1836a/6_А_10106_with_text.jpg" alt=""><span class="years-on-preview">2021-2022</span></div>
-        <div class="container-classfoto"><img class="classfoto" id="new-order" src="eburg1836a/plus23.svg" alt=""><span class="years-on-preview"></span></div>  
-    </div>
-    <div id="next-button"><img src="eburg1836a/arrow-thick-bottom.svg" id="next-foto" class="archive-button"></div>
+    </div>   
+    <div class="text_in_foto" id="school">МАОУ СОШ №183</div>  
+    <div class="text_in_foto" id="the_class">Наш дружный "6А"</div>
+    <div class="text_in_foto" id="years">2021-2022</div>
+    <div class="text_in_foto" id="town">г. Екатеринбург</div>
+    <img id="group_foto" src="eburg1836a/6_А_10106_without_text.jpg">
+    <img id="menu" src="eburg1836a/menu.svg">
+    <svg viewBox="0 0 1000 671">
+        <circle class="children" data-name="Некрасов Максим" data-student-foto="eburg1836a/children/1.png" data-message="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque harum nobis ex tempora sunt minima qui temporibus velit quidem quaerat ipsum natus aperiam numquam optio ut est ad, porro odio?" cx="129" cy="144" r="40"  stroke-width="1" fill="None"/>
+        <circle class="children" data-name="Викулов Ваня" data-student-foto="eburg1836a/children/2.png" data-message="Lorem ipsum dolor sit amet " cx="194" cy="145" r="40"  stroke-width="1" fill="None"/>
+        <circle class="children" data-name="Кузьмин Кирилл" data-student-foto="eburg1836a/children/3.png" data-message="Lorem ipsum dolor sit amet " cx="282" cy="153" r="40"  stroke-width="1" fill="None"/>
+        <circle class="children" data-name="Миронова Маша" data-student-foto="eburg1836a/children/4.png" data-message="Lorem ipsum dolor sit amet " cx="367" cy="145" r="40"  stroke-width="1" fill="None"/>
+        <circle class="children" data-name="Киян Дима" data-student-foto="eburg1836a/children/5.png" data-message="Lorem ipsum dolor sit amet " cx="436" cy="147" r="40"  stroke-width="1" fill="None"/>
+        <circle class="children" data-name="Лапшанова Светлана Альбертовна" data-student-foto="eburg1836a/children/6.png" data-message="Lorem ipsum dolor sit amet " cx="510" cy="114" r="40"  stroke-width="1" fill="None"/>
+        <circle class="children" data-name="Рахматулин Влад" data-student-foto="eburg1836a/children/7.png" data-message="Lorem ipsum dolor sit amet " cx="617" cy="130" r="40"  stroke-width="1" fill="None"/>
+        <circle class="children" data-name="Амарян Дияр" data-student-foto="eburg1836a/children/8.png" data-message="Lorem ipsum dolor sit amet " cx="713" cy="159" r="40"  stroke-width="1" fill="None"/>
+        <circle class="children" data-name="Змеев Алексей" data-student-foto="eburg1836a/children/9.png" data-message="Lorem ipsum dolor sit amet " cx="801" cy="144" r="40"  stroke-width="1" fill="None"/>
+        <circle class="children" data-name="Батчаев Ислам" data-student-foto="eburg1836a/children/10.png" data-message="Lorem ipsum dolor sit amet " cx="922" cy="176" r="40"  stroke-width="1" fill="None"/>
+        <circle class="children" data-name="Соколов Тихон" data-student-foto="eburg1836a/children/11.png" data-message="Lorem ipsum dolor sit amet " cx="944" cy="227" r="40"  stroke-width="1" fill="None"/>
+        <circle class="children" data-name="Силина Вика" data-student-foto="eburg1836a/children/12.png" data-message="Lorem ipsum dolor sit amet " cx="856" cy="203" r="40"  stroke-width="1" fill="None"/>
+        <circle class="children" data-name="Катаева Вика" data-student-foto="eburg1836a/children/13.png" data-message="Lorem ipsum dolor sit amet " cx="767" cy="221" r="40"  stroke-width="1" fill="None"/>
+        <circle class="children" data-name="Абдиламидова Ясмина" data-student-foto="eburg1836a/children/15.png" data-message="Lorem ipsum dolor sit amet " cx="683" cy="214" r="40"  stroke-width="1" fill="None"/>
+        <circle class="children" data-name="Климова Вероника" data-student-foto="eburg1836a/children/14.png" data-message="Lorem ipsum dolor sit amet " cx="630" cy="197" r="40"  stroke-width="1" fill="None"/>
+        <circle class="children" data-name="Рогожкин Денис" data-student-foto="eburg1836a/children/16.png" data-message="Lorem ipsum dolor sit amet " cx="543" cy="213" r="40"  stroke-width="1" fill="None"/>
+        <circle class="children" data-name="Борисов Иван" data-student-foto="eburg1836a/children/17.png" data-message="Lorem ipsum dolor sit amet " cx="454" cy="215" r="40"  stroke-width="1" fill="None"/>
+        <circle class="children" data-name="Вдовин Артём" data-student-foto="eburg1836a/children/18.png" data-message="Lorem ipsum dolor sit amet " cx="388" cy="218" r="40"  stroke-width="1" fill="None"/>
+        <circle class="children" data-name="Лаврентьев Егор" data-student-foto="eburg1836a/children/19.png" data-message="Lorem ipsum dolor sit amet " cx="286" cy="222" r="40"  stroke-width="1" fill="None"/>
+        <circle class="children" data-name="Ярушина София" data-student-foto="eburg1836a/children/20.png" data-message="Lorem ipsum dolor sit amet " cx="197" cy="227" r="40"  stroke-width="1" fill="None"/>
+        <circle class="children" data-name="Хабибрахманова Диана" data-student-foto="eburg1836a/children/21.png" data-message="Lorem ipsum dolor sit amet " cx="100" cy="230" r="40"  stroke-width="1" fill="None"/>
+        <circle class="children" data-name="Андриеш Стелла" data-student-foto="eburg1836a/children/22.png" data-message="Lorem ipsum dolor sit amet " cx="141" cy="356" r="40"  stroke-width="1" fill="None"/>
+        <circle class="children" data-name="Раимбабаева Мадина" data-student-foto="eburg1836a/children/23.png" data-message="Lorem ipsum dolor sit amet " cx="207" cy="358" r="40"  stroke-width="1" fill="None"/>
+        <circle class="children" data-name="Эрболсунова Айназик" data-student-foto="eburg1836a/children/24.png" data-message="Lorem ipsum dolor sit amet " cx="307" cy="298" r="40"  stroke-width="1" fill="None"/>
+        <circle class="children" data-name="Андык Эвелина" data-student-foto="eburg1836a/children/25.png" data-message="Lorem ipsum dolor sit amet " cx="374" cy="303" r="40"  stroke-width="1" fill="None"/>
+        <circle class="children" data-name="Умурзакова Мадина" data-student-foto="eburg1836a/children/26.png" data-message="Lorem ipsum dolor sit amet " cx="474" cy="346" r="40"  stroke-width="1" fill="None"/>
+        <circle class="children" data-name="Паночкина Полина" data-student-foto="eburg1836a/children/27.png" data-message="Lorem ipsum dolor sit amet " cx="537" cy="310" r="40"  stroke-width="1" fill="None"/>
+        <circle class="children" data-name="Свалявин Кирилл" data-student-foto="eburg1836a/children/28.png" data-message="Lorem ipsum dolor sit amet " cx="603" cy="316" r="40"  stroke-width="1" fill="None"/>
+        <circle class="children" data-name="Филипповский Никита" data-student-foto="eburg1836a/children/29.png" data-message="Lorem ipsum dolor sit amet " cx="694" cy="291" r="40"  stroke-width="1" fill="None"/>
+        <circle class="children" data-name="Хайбулин Максим" data-student-foto="eburg1836a/children/30.png" data-message="Lorem ipsum dolor sit amet " cx="763" cy="342" r="40"  stroke-width="1" fill="None"/>
+        <circle class="children" data-name="Шевелев Стёпа" data-student-foto="eburg1836a/children/31.png" data-message="Lorem ipsum dolor sit amet " cx="890" cy="376" r="40"  stroke-width="1" fill="None"/>
+    </svg>    
 </div>
 
-<div id="archive-container">
-    <div id="open-archive-container">
+
+<div id="groupfoto-panel">
+    <div id="open-groupfoto-button" data-position="opened">
+        <img src="eburg1836a/arrow-thick-right.svg" id="open-groupfoto" class="groupfoto-button">
+        <img src="eburg1836a/arrow-thick-left.svg" id="close-groupfoto" class="groupfoto-button">
+    </div>
+    <div id="groupfoto-container">
+        <div id="previous-groupfoto-button"><img src="eburg1836a/arrow-thick-top.svg" id="previous-groupfoto-foto" class="groupfoto-button"></div>
+        <div id="groupfoto">        
+            <div class="container-groupfoto"><img class="imggroupfoto" src="eburg1836a/6_А_10106_with_text.jpg" alt=""><span class="years-on-preview">2021-2022</span></div>
+            <div class="container-groupfoto"><img class="imggroupfoto" id="new-order" src="eburg1836a/plus23.svg" alt=""><span class="years-on-preview"></span></div>  
+        </div>
+        <div id="next-groupfoto-button"><img src="eburg1836a/arrow-thick-bottom.svg" id="next-foto" class="groupfoto-button"></div>
+    </div>
+</div>
+
+
+<div id="archive-panel">
+    <div id="open-archive-button" data-position="opened">
         <img src="eburg1836a/arrow-thick-right.svg" id="close-archive" class="archive-button">
         <img src="eburg1836a/arrow-thick-left.svg" id="open-archive" class="archive-button">
+    </div>    
+    <div id="archive-container"> 
+        <div id="previous-archive-button"><img src="eburg1836a/arrow-thick-top.svg" id="previous-foto" class="archive-button"></div> 
+        <div id="archive">      
+            <div class="container-archivefoto"><img class="imgarchivefoto" src="eburg1836a/6_А_10106_with_text.jpg" alt=""><span class="text-on-preview">Игра</span></div>
+            <div class="container-archivefoto"><img class="imgarchivefoto" id="new-order" src="eburg1836a/plus23.svg" alt=""><span class="text-on-preview"></span></div>  
+        </div>
+        <div id="next-archive-button"><img src="eburg1836a/arrow-thick-bottom.svg" id="next-foto" class="archive-button"></div>
     </div>
-    <div id="previous-archive-button"><img src="eburg1836a/arrow-thick-top.svg" id="previous-foto" class="gallery-button"></div>
-    <div id="archive">        
-        <div class="container-archivefoto"><img class="archivefoto" src="eburg1836a/6_А_10106_with_text.jpg" alt=""><span class="years-on-preview">Игра</span></div>
-        <div class="container-archivefoto"><img class="archivefoto" id="new-order" src="eburg1836a/plus23.svg" alt=""><span class="years-on-preview"></span></div>  
-    </div>
-    <div id="next-archive-button"><img src="eburg1836a/arrow-thick-bottom.svg" id="next-foto" class="archive-button"></div>
 </div>
 
 </body>
+
 <script>
     let children = document.querySelectorAll(".children");
     let children_div = document.getElementById('children_name');
@@ -390,6 +102,7 @@ box-shadow: 15px 15px 10px 2px rgba(34, 60, 80, 0.2);
     let card_student_foto_img = document.getElementById('card_student_foto');
     let card_message_div = document.getElementById('card_message');
     let close_button = document.getElementById('close-button');
+    let open_archive_button = document.getElementById('open-gallery-container');
 
     function viewName(item){
         let children_name = item.getAttribute('data-name');
@@ -421,6 +134,8 @@ box-shadow: 15px 15px 10px 2px rgba(34, 60, 80, 0.2);
         card_div.style.left = coord_x - children_div.clientWidth/2 + 35 + 'px'; 
         card_div.style.display = 'block';          
     };
+
+
     function removeViewName(item){
         let children_name = item.getAttribute('data-name');
         children_div.style.display = 'None';
@@ -439,6 +154,10 @@ box-shadow: 15px 15px 10px 2px rgba(34, 60, 80, 0.2);
     close_button.addEventListener('click', function(){
         card_div.style.display = 'none';
     });
+    open_archive_button.addEventListener('click', function(){
+
+    })
+
     
     // document.addEventListener('click', function(event){
     //     let div_foto = document.getElementById("foto")
