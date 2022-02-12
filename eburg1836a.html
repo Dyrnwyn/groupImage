@@ -9,22 +9,25 @@
 </head>
 <body>
 
-<div id="foto">    
-    <div id="children_name"></div>
-    <div id="close_div">
+
+
+<div id="close_div">
     <img id="close-button" src="close.svg" alt="">
         <div id="children_card">            
             <div id=card_name></div>
             <img id=card_student_foto src="">
             <div id=card_message></div>            
         </div>   
-    </div>   
+</div> 
+<img id="menu" src="eburg1836a/menu.svg">  
+<div id="foto"> 
+    <div id="children_name"></div>      
     <div class="text_in_foto" id="school">МАОУ СОШ №183</div>  
     <div class="text_in_foto" id="the_class">Наш дружный "6А"</div>
     <div class="text_in_foto" id="years">2021-2022</div>
     <div class="text_in_foto" id="town">г. Екатеринбург</div>
-    <img id="group_foto" src="eburg1836a/6_А_10106_without_text.jpg">
-    <img id="menu" src="eburg1836a/menu.svg">
+    <div id="group_foto">
+    <img src="eburg1836a/6_А_10106_without_text.jpg">    
     <svg viewBox="0 0 1000 671">
         <circle class="children" data-name="Некрасов Максим" data-student-foto="eburg1836a/children/1.png" data-message="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque harum nobis ex tempora sunt minima qui temporibus velit quidem quaerat ipsum natus aperiam numquam optio ut est ad, porro odio?" cx="129" cy="144" r="40"  stroke-width="1" fill="None"/>
         <circle class="children" data-name="Викулов Ваня" data-student-foto="eburg1836a/children/2.png" data-message="Lorem ipsum dolor sit amet " cx="194" cy="145" r="40"  stroke-width="1" fill="None"/>
@@ -57,7 +60,8 @@
         <circle class="children" data-name="Филипповский Никита" data-student-foto="eburg1836a/children/29.png" data-message="Lorem ipsum dolor sit amet " cx="694" cy="291" r="40"  stroke-width="1" fill="None"/>
         <circle class="children" data-name="Хайбулин Максим" data-student-foto="eburg1836a/children/30.png" data-message="Lorem ipsum dolor sit amet " cx="763" cy="342" r="40"  stroke-width="1" fill="None"/>
         <circle class="children" data-name="Шевелев Стёпа" data-student-foto="eburg1836a/children/31.png" data-message="Lorem ipsum dolor sit amet " cx="890" cy="376" r="40"  stroke-width="1" fill="None"/>
-    </svg>    
+    </svg> 
+</div>   
 </div>
 
 
@@ -111,8 +115,8 @@
         let radius = item.getAttribute('r');   
         children_div.style.display = 'block';     
         children_div.innerHTML = children_name;
-        children_div.style.top = coord_y - radius - children_div.clientHeight + 'px';
-        children_div.style.left = coord_x - children_div.clientWidth/2 + 'px'; 
+        children_div.style.top = (coord_y - radius - children_div.clientHeight)/10.8 + 19 + 'vh';
+        children_div.style.left = (coord_x - children_div.clientWidth/2)/19.2 + 23 + 'vw'; 
         children_div.style.backgroundColor = 'azure';
         children_div.style.padding = '5px';
         children_div.style.border = '1px solid';

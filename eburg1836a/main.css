@@ -2,7 +2,7 @@ body{
     margin: 0;
     display: grid;
     grid-template-rows: auto;
-    grid-template-columns: 1000px;
+    grid-template-columns: 52vw;
     width: 100vw;
     height: 100vh;
     justify-content: center;
@@ -12,20 +12,48 @@ body{
     justify-items: center;
 }
 #group_foto{
-    border-radius: 25px;
-    border: snow 3px solid;
-    -webkit-box-shadow: 15px 15px 10px 2px rgba(34, 60, 80, 0.2);
--moz-box-shadow: 15px 15px 10px 2px rgba(34, 60, 80, 0.2);
-box-shadow: 15px 15px 10px 2px rgba(34, 60, 80, 0.2);
+      position: relative;
+      grid-area: group_foto;
+}
+#group_foto img{
+    width: 52vw; 
+    border-radius: 2.3vh; 
+    border: snow 0.28vh solid;
+    -webkit-box-shadow: 1.4vh 1.4vh 0.9vh 0.2vh rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 1.4vh 1.4vh 0.9vh 0.2vh rgba(34, 60, 80, 0.2);
+    box-shadow: 1.4vh 1.4vh 0.9vh 0.2vh rgba(34, 60, 80, 0.2);
 }
 #foto{
-    position: relative;
+    display: grid;
+    grid-template-areas: 
+    "school the_class"
+    "group_foto group_foto"
+    "town years";
+    grid-template-rows: 2.9vh 1fr 2.9vh;
+    grid-template-columns: 1fr 1fr;
    
 }
-img#foto{
-  width: 100%;
+.text_in_foto{
+    font-family: "Monotype Corsiva";
+    font-size: 2.8vh;
+    text-shadow: 0.09vh 0.09vh 0.9vh black;
 }
-
+#town{
+    grid-area: town;
+    text-align: left;
+}
+#years{
+    grid-area: years;
+    text-align: right;
+}
+#school{
+    grid-area: school;
+    text-align: left;
+}
+#the_class{
+    grid-area: the_class;
+    text-align: right;
+}
 svg{
     position: absolute;
     top: 0;
@@ -42,13 +70,15 @@ svg circle{
     position: absolute;
     z-index: 10;
     display: None; 
+    font-size: 1.6vh;
     }
+
 #children_card{    
     background-color: azure;
     border: 1px solid black;
     border-radius: 10px;
     width: min-content;
-    height: 250px;
+    height: 23.2vh;
     overflow: auto;
     -webkit-box-shadow: 5px 4px 3px 0px rgba(34, 60, 80, 0.2);
     -moz-box-shadow: 5px 4px 3px 0px rgba(34, 60, 80, 0.2);
@@ -82,39 +112,19 @@ svg circle{
 #card_message{
     padding: 3px;
 }
-.text_in_foto{
-    position: absolute;
-    font-family: "Monotype Corsiva";
-    font-size: 1.8em;
-    text-shadow: 1px 1px 10px black;
-}
-#town{
-    top: 680px;
-    left: 800px;
-}
-#years{
-    top: 680px;
-    left: 25px;
-}
-#school{
-    left: 1%;
-    top: -35px;
-}
-#the_class{
-    left: 77%;
-    top: -35px;
-}
+
+
 @font-face {
     font-family: "Monotype Corsiva";
     src: url("monotypecorsiva.ttf") format("truetype");
 }
 #menu{
     display: block;
-    width: 25px;
-    height: 20px;
+    width: 1.3vw;
+    height: 1.85vh;
     position: absolute;
-    top: 15px;
-    left: -5%;
+    top: 0;
+    left: 24vw;
 }
 /*-----------Боковая левая панель с групповыми-------------*/
 #groupfoto-panel{
