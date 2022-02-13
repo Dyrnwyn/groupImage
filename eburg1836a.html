@@ -11,17 +11,23 @@
 
 
 
-<div id="close_div">
-    <img id="close-button" src="close.svg" alt="">
-        <div id="children_card">            
-            <div id=card_name></div>
-            <img id=card_student_foto src="">
-            <div id=card_message></div>            
-        </div>   
+<div id="menu-container">
+    <span class="menu-item">Скачать</span>
+    <span class="menu-item">Обратиться</span>
+    <span class="menu-item">Помощь</span>
+    <span class="menu-item">Войти</span>
+<!-- <img id="menu" src="eburg1836a/menu.svg">  -->
 </div> 
-<img id="menu" src="eburg1836a/menu.svg">  
 <div id="foto"> 
-    <div id="children_name"></div>      
+    <div id="children_name"></div>    
+    <div id="close_div">
+        <img id="close-button" src="close.svg" alt="">
+            <div id="children_card">            
+                <div id=card_name></div>
+                <img id=card_student_foto src="">
+                <div id=card_message></div>            
+            </div>   
+    </div>   
     <div class="text_in_foto" id="school">МАОУ СОШ №183</div>  
     <div class="text_in_foto" id="the_class">Наш дружный "6А"</div>
     <div class="text_in_foto" id="years">2021-2022</div>
@@ -115,8 +121,8 @@
         let radius = item.getAttribute('r');   
         children_div.style.display = 'block';     
         children_div.innerHTML = children_name;
-        children_div.style.top = (coord_y - radius - children_div.clientHeight)/10.8 + 19 + 'vh';
-        children_div.style.left = (coord_x - children_div.clientWidth/2)/19.2 + 23 + 'vw'; 
+        children_div.style.top = coord_y - radius - children_div.clientHeight + 'px';
+        children_div.style.left = coord_x - children_div.clientWidth/2 + 'px'; 
         children_div.style.backgroundColor = 'azure';
         children_div.style.padding = '5px';
         children_div.style.border = '1px solid';

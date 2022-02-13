@@ -31,6 +31,7 @@ body{
     "town years";
     grid-template-rows: 2.9vh 1fr 2.9vh;
     grid-template-columns: 1fr 1fr;
+    position: relative;
    
 }
 .text_in_foto{
@@ -313,4 +314,30 @@ svg circle{
 }
 #archive div:first-child img{
     margin-top: 0.56vh;
+}
+/*---------------Меню---------------------*/
+#menu-container{
+    top: 0;
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 0.1vw;
+    width: 50vw;
+}
+.menu-item{
+    padding: 1vh;
+    font-size: 1.5vh;
+    display: block;
+    text-align: center;
+    -webkit-box-shadow: 0px 0px 12px 0px rgba(34, 60, 80, 0.2) inset;
+-moz-box-shadow: 0px 0px 12px 0px rgba(34, 60, 80, 0.2) inset;
+box-shadow: 0px 0px 12px 0px rgba(34, 60, 80, 0.2) inset;
+    background-color: aliceblue;
+}
+.menu-item:hover{
+    background-color: azure;
+    -webkit-box-shadow: 0px 0px 12px 0px rgba(34, 60, 80, 0.2) inset;
+    -moz-box-shadow: 0px 0px 12px 0px rgba(34, 60, 80, 0.2) inset;
+    box-shadow: 0px 0px 12px 0px rgba(34, 60, 80, 0.2) inset;
 }
