@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="eburg1836a/main.css">
+    <script async src="eburg1836a/main.js"></script>
     <title>Document</title>
 </head>
+
 <body>
-
-
 
 <div id="menu-container">
     <span class="menu-item">Скачать</span>
@@ -18,6 +18,7 @@
     <span class="menu-item">Войти</span>
 <!-- <img id="menu" src="eburg1836a/menu.svg">  -->
 </div> 
+
 <div id="foto"> 
     <div id="children_name"></div>    
     <div id="close_div">
@@ -70,7 +71,6 @@
 </div>   
 </div>
 
-
 <div id="groupfoto-panel">
     <div id="open-groupfoto-button" data-position="opened">
         <img src="eburg1836a/arrow-thick-right.svg" id="open-groupfoto" class="groupfoto-button">
@@ -103,78 +103,4 @@
 </div>
 
 </body>
-
-<script>
-    let children = document.querySelectorAll(".children");
-    let children_div = document.getElementById('children_name');
-    let card_div = document.getElementById('close_div');
-    let card_name_div = document.getElementById('card_name');
-    let card_student_foto_img = document.getElementById('card_student_foto');
-    let card_message_div = document.getElementById('card_message');
-    let close_button = document.getElementById('close-button');
-    let open_archive_button = document.getElementById('open-gallery-container');
-
-    function viewName(item){
-        let children_name = item.getAttribute('data-name');
-        let coord_x = item.getAttribute('cx');
-        let coord_y = item.getAttribute('cy');
-        let radius = item.getAttribute('r');   
-        children_div.style.display = 'block';     
-        children_div.innerHTML = children_name;
-        children_div.style.top = coord_y - radius - children_div.clientHeight + 'px';
-        children_div.style.left = coord_x - children_div.clientWidth/2 + 'px'; 
-        children_div.style.backgroundColor = 'azure';
-        children_div.style.padding = '5px';
-        children_div.style.border = '1px solid';
-        children_div.style.borderRadius = '7px';
-    };
-
-    function viewCard(item){
-        children_div.style.display = 'none';
-        let card_name = item.getAttribute('data-name');
-        let card_student_foto = item.getAttribute('data-student-foto');
-        let card_message = item.getAttribute('data-message');
-        let coord_x = item.getAttribute('cx');
-        let coord_y = item.getAttribute('cy');
-        let radius = item.getAttribute('r');              
-        card_name_div.innerHTML = card_name;
-        card_student_foto_img.setAttribute('src', card_student_foto);
-        card_message_div.innerHTML = card_message;
-        card_div.style.top = coord_y - radius - children_div.clientHeight - 50 + 'px';
-        card_div.style.left = coord_x - children_div.clientWidth/2 + 35 + 'px'; 
-        card_div.style.display = 'block';          
-    };
-
-
-    function removeViewName(item){
-        let children_name = item.getAttribute('data-name');
-        children_div.style.display = 'None';
-    };
-    children.forEach((item)=>{
-        item.addEventListener('click', function(){
-            viewCard(item);       
-        });
-        item.addEventListener('mouseover', function(){
-            viewName(item);       
-        });
-        item.addEventListener('mouseout', function(){
-            removeViewName(item);       
-        });
-    });
-    close_button.addEventListener('click', function(){
-        card_div.style.display = 'none';
-    });
-    open_archive_button.addEventListener('click', function(){
-
-    })
-
-    
-    // document.addEventListener('click', function(event){
-    //     let div_foto = document.getElementById("foto")
-    //     console.log(div_foto.offsetTop + ' ' + div_foto.offsetLeft)
-    //     console.log(event.clientY + ' ' + event.clientX)
-    //     console.log((event.clientX - div_foto.offsetLeft) + ' ' + (event.clientY - div_foto.offsetTop))
-    // });
-    
-</script>
 </html>
