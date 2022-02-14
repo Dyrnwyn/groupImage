@@ -321,12 +321,12 @@ svg circle{
     position: absolute;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: 1.5vh;
     grid-gap: 0.1vw;
     width: 50vw;
 }
 .menu-item{
-    padding: 1vh;
+    /* padding: 1vh; */
     font-size: 1.5vh;
     display: block;
     text-align: center;
@@ -336,6 +336,8 @@ box-shadow: 0px 0px 12px 0px rgba(34, 60, 80, 0.2) inset;
     background-color: aliceblue;
 }
 .menu-item:hover{
+    padding: 1vh;
+    height: 2.5vh;
     background-color: azure;
     -webkit-box-shadow: 0px 0px 12px 0px rgba(34, 60, 80, 0.2) inset;
     -moz-box-shadow: 0px 0px 12px 0px rgba(34, 60, 80, 0.2) inset;
