@@ -7,6 +7,10 @@ let card_message_div = document.getElementById('card_message');
 let close_button = document.getElementById('close-button');
 let open_archive_button = document.getElementById('open-archive-button');
 let open_groupfoto_button = document.getElementById('open-groupfoto-button');
+let close_order_archive = document.getElementById("close-order-archive");
+let new_order_archive = document.getElementById("new-order-archive");
+let new_order_groupfoto = document.getElementById("new-order-groupfoto");
+let close_order_groupfoto = document.getElementById("close-order-groupfoto");
 function viewName(item){
     let children_name = item.getAttribute('data-name');
     let coord_x = item.getAttribute('cx');
@@ -94,6 +98,31 @@ open_groupfoto_button.addEventListener('click', ()=>{
         open_archive.style.display = "none";
         close_arhive.style.display = "block";
     }
+});
+close_order_archive.addEventListener('click',()=>{
+    let blackscreen = document.getElementById("blackscreen");
+    let order_archive = document.getElementById("order-archive");
+    blackscreen.style.display = "none";
+    order_archive.style.display = "none";
+});
+new_order_archive.addEventListener('click', ()=>{
+    let blackscreen = document.getElementById("blackscreen");
+    let order_archive = document.getElementById("order-archive");
+    blackscreen.style.display = "block";
+    order_archive.style.display = "grid";  
+});
+
+close_order_groupfoto.addEventListener('click',()=>{
+    let blackscreen = document.getElementById("blackscreen");
+    let order_archive = document.getElementById("order-groupfoto");
+    blackscreen.style.display = "none";
+    order_archive.style.display = "none";
+});
+new_order_groupfoto.addEventListener('click', ()=>{
+    let blackscreen = document.getElementById("blackscreen");
+    let order_archive = document.getElementById("order-groupfoto");
+    blackscreen.style.display = "block";
+    order_archive.style.display = "grid";  
 });
 
 

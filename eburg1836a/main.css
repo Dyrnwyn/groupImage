@@ -221,7 +221,7 @@ svg circle{
 .container-groupfoto{
     position: relative;
 }
-#new-order:hover{
+#new-order-groupfoto:hover, #new-order-archive:hover{
     background-color: linen;
 }
 /*----------------------Боковая панель архива событий-----------------*/
@@ -342,4 +342,39 @@ box-shadow: 0px 0px 12px 0px rgba(34, 60, 80, 0.2) inset;
     -webkit-box-shadow: 0px 0px 12px 0px rgba(34, 60, 80, 0.2) inset;
     -moz-box-shadow: 0px 0px 12px 0px rgba(34, 60, 80, 0.2) inset;
     box-shadow: 0px 0px 12px 0px rgba(34, 60, 80, 0.2) inset;
+}
+/*---------------Черный экран----------------------*/
+#blackscreen{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    opacity: 0.7;
+    z-index: 30;
+    display: none;
+}
+
+/*----------------Форма заказа архивного фото------------------*/
+#order-archive{
+    position: absolute;
+    z-index: 31;
+    background-color: azure;
+    padding: 2vh;
+    display: grid;
+    display: none;
+}
+#close-order-archive, #close-order-groupfoto{
+    position: absolute;
+    right: 0;
+    width: 2vh;
+    height: 2vh;
+}
+/*-----------------Форма заказа группового фото-----------------*/
+#order-groupfoto{
+    position: absolute;
+    z-index: 31;
+    background-color: azure;
+    padding: 2vh;
+    display: grid;
+    display: none;
 }
