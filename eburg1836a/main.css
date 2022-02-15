@@ -300,7 +300,7 @@ svg circle{
     background-color: gainsboro;
     font-size: 0.85vw;
 }
-.imgarchivefoto{
+.imagearchivefoto, #new-order-archive{
     margin-right: 0.3125vw;
     margin-left: 0.3125vw;
     margin-top: 1.3vh;
@@ -360,11 +360,12 @@ box-shadow: 0px 0px 12px 0px rgba(34, 60, 80, 0.2) inset;
     z-index: 31;
     background-color: azure;
     padding: 2vh;
-    display: grid;
+    /* display: grid; */
     display: none;
 }
-#close-order-archive, #close-order-groupfoto{
+#close-order-archive, #close-order-groupfoto, #close-fotogallery{
     position: absolute;
+    top: 0;
     right: 0;
     width: 2vh;
     height: 2vh;
@@ -375,6 +376,14 @@ box-shadow: 0px 0px 12px 0px rgba(34, 60, 80, 0.2) inset;
     z-index: 31;
     background-color: azure;
     padding: 2vh;
-    display: grid;
+    /* display: grid; */
+    display: none;
+}
+/*------------------Галерея------------*/
+#fotogallery{
+    position: absolute;
+    z-index: 31;
+    padding: 2vh;
+    background-color: azure;
     display: none;
 }

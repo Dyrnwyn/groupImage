@@ -11,6 +11,9 @@ let close_order_archive = document.getElementById("close-order-archive");
 let new_order_archive = document.getElementById("new-order-archive");
 let new_order_groupfoto = document.getElementById("new-order-groupfoto");
 let close_order_groupfoto = document.getElementById("close-order-groupfoto");
+let preview_image_archive_foto = document.querySelectorAll(".imagearchivefoto");
+let close_fotogallery = document.getElementById("close-fotogallery");
+
 function viewName(item){
     let children_name = item.getAttribute('data-name');
     let coord_x = item.getAttribute('cx');
@@ -48,7 +51,6 @@ function removeViewName(item){
 };
 
 children.forEach((item)=>{
-    console.log("123123")
     item.addEventListener('click', function(){
         viewCard(item);       
     });
@@ -59,9 +61,27 @@ children.forEach((item)=>{
         removeViewName(item);       
     });
 });
-console.log(close_button);
 close_button.addEventListener('click', function(){
     card_div.style.display = 'none';
+});
+
+preview_image_archive_foto.forEach((item)=>{
+    item.addEventListener('click', ()=>{
+        let fotogallery = document.getElementById('fotogallery');
+        fotogallery.style.display = 'inline-block';
+        console.log(item.dataset.archiveid);
+        let list_of_foto_in_archive = ['eburg1836a/archive/1_1.jpg','eburg1836a/archive/1_2.jpg',
+                                       'eburg1836a/archive/1_3.jpg','eburg1836a/archive/1_4.jpg',
+                                       'eburg1836a/archive/1_5.jpg'];
+        for (let key in list_of_foto_in_archive){
+            // console.log(list_of_foto_in_archive[key]);
+        }
+    });
+});
+
+close_fotogallery.addEventListener('click', ()=>{
+    let fotogallery = document.getElementById('fotogallery');
+    fotogallery.style.display = 'none';
 });
 
 open_archive_button.addEventListener('click', ()=>{
