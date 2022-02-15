@@ -160,7 +160,7 @@ svg circle{
     overflow: hidden;
     width: min-content;          
 }
-#groupfoto div:first-child img{
+#groupfoto div:first-child{
     margin-top: 0.56vh;
 }
 #open-groupfoto-button{
@@ -175,11 +175,18 @@ svg circle{
     -moz-box-shadow: 0px 2px 4px 2px rgba(34, 60, 80, 0.2) inset;
     box-shadow: 0px 2px 4px 2px rgba(34, 60, 80, 0.2) inset;
 }
-.imggroupfoto{
-    margin-right: 0.3125vw;
-    margin-left: 0.3125vw;
-    margin-top: 1.3vh;
+.container-groupfoto{
+    position: relative;
     border-radius: 0.25vw;
+    margin-left: 0.325vw;
+    margin-right: 0.325vw;
+    margin-top: 1.3vh;
+}
+.imggroupfoto{
+    /* margin-right: 0.3125vw;
+    margin-left: 0.3125vw;
+    margin-top: 1.3vh; */
+    
     width: 7.85vw;
     position: relative;
     display: block;
@@ -210,16 +217,22 @@ svg circle{
     align-items: center;
 }
 .years-on-preview{
-    display: block;
+    display: flex;
     position: absolute;
     z-index: 5;
-    top: 7.4vh;
-    left: 4.17vw;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     background-color: gainsboro;
     font-size: 0.85vw;
+    text-align: center;
+    align-items: center;
+    font-size: 1.7vh;
+    height: 1.7vh;
+    justify-content: center;
 }
-.container-groupfoto{
-    position: relative;
+.container-groupfoto:hover > .years-on-preview{
+        height: 3.2vh;
 }
 #new-order-groupfoto:hover, #new-order-archive:hover{
     background-color: linen;
