@@ -412,13 +412,14 @@ box-shadow: 0px 0px 12px 0px rgba(34, 60, 80, 0.2) inset;
     grid-template-areas: 
     "fotogallery-full-view-foto"
     "fotogallery-preview-foto";
-    grid-template-columns: 1fr;
-    grid-template-rows: 60vh 20vh;
+    grid-template-columns: 60vw;
+    grid-template-rows: 55vh 20vh;
+    justify-content: center;
 }
 #fotogallery-full-view-foto{
     display: grid;
     grid-area: fotogallery-full-view-foto;
-    justify-content: center;
+    justify-items: center;
     align-items: center;
 }
 #fotogallery-preview-foto{
@@ -430,7 +431,7 @@ box-shadow: 0px 0px 12px 0px rgba(34, 60, 80, 0.2) inset;
     justify-items: center;
 }
 #preview-foto{
-    /* display: inline-block; */
+    display: inline-block;
     overflow: hidden;
     white-space: nowrap;
 }
