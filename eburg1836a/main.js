@@ -13,6 +13,7 @@ let new_order_groupfoto = document.getElementById("new-order-groupfoto");
 let close_order_groupfoto = document.getElementById("close-order-groupfoto");
 let preview_image_archive_foto = document.querySelectorAll(".imagearchivefoto");
 let close_fotogallery = document.getElementById("close-fotogallery");
+let fotogallery_img_preview_foto = document.querySelectorAll(".img-preview-foto");
 
 function viewName(item){
     let children_name = item.getAttribute('data-name');
@@ -77,6 +78,14 @@ preview_image_archive_foto.forEach((item)=>{
         for (let key in list_of_foto_in_archive){
             // console.log(list_of_foto_in_archive[key]);
         }
+    });
+});
+
+fotogallery_img_preview_foto.forEach((item)=>{
+    item.addEventListener('click', ()=>{
+        full_view_foto = document.getElementById("full-view-foto");
+        img_src = item.getAttribute("src");
+        full_view_foto.setAttribute("src", img_src);
     });
 });
 
