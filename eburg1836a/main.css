@@ -224,7 +224,7 @@ svg circle{
     left: 0;
     width: 100%;
     background-color: gainsboro;
-    font-size: 0.85vw;
+    /* font-size: 0.85vw; */
     text-align: center;
     align-items: center;
     font-size: 1.7vh;
@@ -268,6 +268,7 @@ svg circle{
 }
 #archive{
     grid-area: archive;
+
 }
 #archive div:first-child img:first-child{
     margin-top: 0.56vh;
@@ -289,6 +290,13 @@ svg circle{
 }
 .container-archivefoto{
     position: relative;
+    margin-right: 0.3125vw;
+    margin-left: 0.3125vw;
+    margin-top: 1.3vh;
+    border-radius: 0.25vw;
+}
+.container-archivefoto:hover > .text-on-preview{
+    height: 3vh;
 }
 #next-archive-button{
     grid-area: next-archive-button;
@@ -305,19 +313,21 @@ svg circle{
     align-items: center;
 }
 .text-on-preview{
-    display: block;
+    display: flex;
     position: absolute;
     z-index: 5;
-    top: 7.4vh;;
-    left: 4.17vw;
+    bottom: 0;
+    left: 0;
     background-color: gainsboro;
-    font-size: 0.85vw;
+    font-size: 1.7vh;
+    height: 1.7vh;
+    width: 100%;
+    /* text-align: center; */
+    align-items: center;
+    justify-content: center;
 }
 .imagearchivefoto, #new-order-archive{
-    margin-right: 0.3125vw;
-    margin-left: 0.3125vw;
-    margin-top: 1.3vh;
-    border-radius: 0.25vw;
+
     width: 7.85vw;
     position: relative;
     display: block;
