@@ -67,9 +67,10 @@ close_button.addEventListener('click', function(){
 
 preview_image_archive_foto.forEach((item)=>{
     item.addEventListener('click', ()=>{
+        let blackscreen = document.getElementById("blackscreen");
         let fotogallery = document.getElementById('fotogallery');
-        fotogallery.style.display = 'inline-block';
-        console.log(item.dataset.archiveid);
+        fotogallery.style.display = 'grid';
+        blackscreen.style.display = 'block';
         let list_of_foto_in_archive = ['eburg1836a/archive/1_1.jpg','eburg1836a/archive/1_2.jpg',
                                        'eburg1836a/archive/1_3.jpg','eburg1836a/archive/1_4.jpg',
                                        'eburg1836a/archive/1_5.jpg'];
@@ -81,7 +82,9 @@ preview_image_archive_foto.forEach((item)=>{
 
 close_fotogallery.addEventListener('click', ()=>{
     let fotogallery = document.getElementById('fotogallery');
+    let blackscreen = document.getElementById("blackscreen");
     fotogallery.style.display = 'none';
+    blackscreen.style.display = 'none';
 });
 
 open_archive_button.addEventListener('click', ()=>{

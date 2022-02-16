@@ -392,6 +392,7 @@ box-shadow: 0px 0px 12px 0px rgba(34, 60, 80, 0.2) inset;
     right: 0;
     width: 2vh;
     height: 2vh;
+    z-index: 5;
 }
 /*-----------------Форма заказа группового фото-----------------*/
 #order-groupfoto{
@@ -409,4 +410,32 @@ box-shadow: 0px 0px 12px 0px rgba(34, 60, 80, 0.2) inset;
     padding: 2vh;
     background-color: azure;
     display: none;
+    width: 65vw;
+    height: 80vh;
+}
+#fotogallery-container{
+    display: grid;
+    grid-template-areas: 
+    "fotogallery-full-view-foto"
+    "fotogallery-preview-foto";
+    grid-template-columns: 1fr;
+    grid-template-rows: 60vh 20vh;
+}
+#fotogallery-full-view-foto{
+    display: grid;
+    grid-area: fotogallery-full-view-foto;
+    justify-content: center;
+    align-items: center;
+}
+#fotogallery-preview-foto{
+    display: grid;
+    grid-area: fotogallery-preview-foto;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 5fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+#fotogallery-preview-foto img{
+    width: 5vw;
+
 }
