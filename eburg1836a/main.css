@@ -175,6 +175,9 @@ svg circle{
     -moz-box-shadow: 0px 2px 4px 2px rgba(34, 60, 80, 0.2) inset;
     box-shadow: 0px 2px 4px 2px rgba(34, 60, 80, 0.2) inset;
 }
+#open-groupfoto{
+    display: none;
+}
 .container-groupfoto{
     position: relative;
     border-radius: 0.25vw;
@@ -182,25 +185,8 @@ svg circle{
     margin-right: 0.325vw;
     margin-top: 1.3vh;
 }
-.imggroupfoto{
-    /* margin-right: 0.3125vw;
-    margin-left: 0.3125vw;
-    margin-top: 1.3vh; */
-    
-    width: 7.85vw;
-    position: relative;
-    display: block;
-    -webkit-box-shadow: -1px -1px 3px 0px rgba(34, 60, 80, 0.6);
-    -moz-box-shadow: -1px -1px 3px 0px rgba(34, 60, 80, 0.6);
-    box-shadow: -1px -1px 3px 0px rgba(34, 60, 80, 0.6);
-
-}        
-.groupfoto-button, .archive-button{
-    width: 1vw;
-    height: 1vw;
-}
-#open-groupfoto{
-    display: none;
+.container-groupfoto:hover > .years-on-preview{
+    height: 3vh;
 }
 #next-groupfoto-button{
     grid-area: next-groupfoto-button;
@@ -231,8 +217,18 @@ svg circle{
     height: 1.7vh;
     justify-content: center;
 }
-.container-groupfoto:hover > .years-on-preview{
-        height: 3.2vh;
+.imggroupfoto{ 
+    width: 7.85vw;
+    position: relative;
+    display: block;
+    -webkit-box-shadow: -1px -1px 3px 0px rgba(34, 60, 80, 0.6);
+    -moz-box-shadow: -1px -1px 3px 0px rgba(34, 60, 80, 0.6);
+    box-shadow: -1px -1px 3px 0px rgba(34, 60, 80, 0.6);
+
+}        
+.groupfoto-button, .archive-button{
+    width: 1vw;
+    height: 1vw;
 }
 #new-order-groupfoto:hover, #new-order-archive:hover{
     background-color: linen;
@@ -263,14 +259,13 @@ svg circle{
     "archive"
     "next-archive-button";
     grid-template-rows: 3vh 94vh 3vh;
-    overflow: hidden;
-    width: min-content;          
 }
 #archive{
     grid-area: archive;
-
+    overflow: hidden;
+    width: min-content;
 }
-#archive div:first-child img:first-child{
+#archive div:first-child{
     margin-top: 0.56vh;
 }
 #open-archive-button{
@@ -327,7 +322,6 @@ svg circle{
     justify-content: center;
 }
 .imagearchivefoto, #new-order-archive{
-
     width: 7.85vw;
     position: relative;
     display: block;
