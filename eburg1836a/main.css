@@ -138,7 +138,7 @@ svg circle{
     top: 0px;
     left: 0px;
     height: 100vh;
-    background-color: azure;
+    background-color:rgb(240 255 255 / 40%);
     border-radius: 0.26vw;
     -webkit-box-shadow: 0.42vw 0px 4px 0px rgba(34, 60, 80, 0.2);
     -moz-box-shadow: 0.42vw 0px 4px 0px rgba(34, 60, 80, 0.2);
@@ -244,7 +244,7 @@ svg circle{
     top: 0px;
     right: 0;
     height: 100vh;
-    background-color: azure;
+    background-color: rgb(240 255 255 / 40%);
     border-radius: 0.26vw;
     -webkit-box-shadow: -0.42vw 0px 4px 0px rgba(34, 60, 80, 0.2);
     -moz-box-shadow: -0.42vw 0px 4px 0px rgba(34, 60, 80, 0.2);
@@ -350,12 +350,12 @@ svg circle{
     -webkit-box-shadow: 0px 0px 12px 0px rgba(34, 60, 80, 0.2) inset;
 -moz-box-shadow: 0px 0px 12px 0px rgba(34, 60, 80, 0.2) inset;
 box-shadow: 0px 0px 12px 0px rgba(34, 60, 80, 0.2) inset;
-    background-color: aliceblue;
+    background-color: rgb(240 248 255 / 40%);
 }
 .menu-item:hover{
     padding: 1vh;
     height: 2.5vh;
-    background-color: azure;
+    background-color: rgb(240 248 255 / 40%);
     -webkit-box-shadow: 0px 0px 12px 0px rgba(34, 60, 80, 0.2) inset;
     -moz-box-shadow: 0px 0px 12px 0px rgba(34, 60, 80, 0.2) inset;
     box-shadow: 0px 0px 12px 0px rgba(34, 60, 80, 0.2) inset;
@@ -402,7 +402,7 @@ box-shadow: 0px 0px 12px 0px rgba(34, 60, 80, 0.2) inset;
     position: absolute;
     z-index: 31;
     padding: 2vh;
-    background-color: azure;
+    /* background-color: azure; */
     display: none;
     width: 65vw;
     height: 80vh;
@@ -414,6 +414,7 @@ box-shadow: 0px 0px 12px 0px rgba(34, 60, 80, 0.2) inset;
     "fotogallery-preview-foto";
     grid-template-columns: 60vw;
     grid-template-rows: 55vh 20vh;
+    grid-gap: 2vh;
     justify-content: center;
 }
 #fotogallery-full-view-foto{
@@ -421,7 +422,17 @@ box-shadow: 0px 0px 12px 0px rgba(34, 60, 80, 0.2) inset;
     grid-area: fotogallery-full-view-foto;
     justify-items: center;
     align-items: center;
+    background-color: rgb(255 255 255 / 70%);
+    border-radius: 3vh;
 }
+/* #full-view-foto{
+    background-color: rgb(255 255 255 / 70%);
+    border-radius: 2vh;
+}
+#fotogallery-text-bottom-foto{
+    background-color: rgb(255 255 255 / 70%);
+    border-radius: 2vh;
+} */
 #fotogallery-preview-foto{
     display: grid;
     grid-area: fotogallery-preview-foto;
@@ -429,19 +440,24 @@ box-shadow: 0px 0px 12px 0px rgba(34, 60, 80, 0.2) inset;
     grid-template-columns: 1fr 7fr 1fr;
     align-items: center;
     justify-items: center;
+    background-color: rgb(255 255 255 / 70%);
+    border-radius: 2vh;
 }
 #preview-foto{
-    display: inline-block;
+    display: flex;
     overflow: hidden;
     white-space: nowrap;
+    
+}
+.img-preview-foto{
+    border: 0.2vh solid whitesmoke;
 }
 .img-preview-foto:hover{
-    border: 0.1vh yellow dotted;
+    border: 0.2vh yellow solid;
 }
 #fotogallery-preview-foto > #preview-foto img{
-    width: 13vw;
-    display: inline-block;
-    padding: 0.5vh;
+    width: 10vw;
+   
 }
 #fotogallery-preview-foto-left, #fotogallery-preview-foto-right{
     width: 5vw;
