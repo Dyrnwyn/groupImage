@@ -13,7 +13,7 @@ let new_order_groupfoto = document.getElementById("new-order-groupfoto");
 let close_order_groupfoto = document.getElementById("close-order-groupfoto");
 let preview_image_archive_foto = document.querySelectorAll(".imagearchivefoto");
 let close_fotogallery = document.getElementById("close-fotogallery");
-let fotogallery_img_preview_foto = document.querySelectorAll(".img-preview-foto");
+
 
 function viewName(item){
     let children_name = item.getAttribute('data-name');
@@ -68,32 +68,64 @@ close_button.addEventListener('click', function(){
 
 preview_image_archive_foto.forEach((item)=>{
     item.addEventListener('click', ()=>{
+        let event_id = item.dataset.archiveid;
         let blackscreen = document.getElementById("blackscreen");
-        let fotogallery = document.getElementById('fotogallery');
+        let fotogallery = document.getElementById("fotogallery");
+        let preview_foto = document.getElementById("preview-foto");
         fotogallery.style.display = 'grid';
         blackscreen.style.display = 'block';
-        let list_of_foto_in_archive = ['eburg1836a/archive/1_1.jpg','eburg1836a/archive/1_2.jpg',
-                                       'eburg1836a/archive/1_3.jpg','eburg1836a/archive/1_4.jpg',
-                                       'eburg1836a/archive/1_5.jpg'];
-        for (let key in list_of_foto_in_archive){
-            // console.log(list_of_foto_in_archive[key]);
+        let dict_of_event_foto = new Map();
+        dict_of_event_foto.set("inClass", ['eburg1836a/fotoEvent/В классе/8200.jpg', 'eburg1836a/fotoEvent/В классе/8206.jpg',
+                                           'eburg1836a/fotoEvent/В классе/8215.jpg', 'eburg1836a/fotoEvent/В классе/8232.jpg',
+                                           'eburg1836a/fotoEvent/В классе/8785.jpg', 'eburg1836a/fotoEvent/В классе/8795.jpg',
+                                           'eburg1836a/fotoEvent/В классе/8806.jpg', 'eburg1836a/fotoEvent/В классе/8816.jpg',
+                                           'eburg1836a/fotoEvent/В классе/8823.jpg', 'eburg1836a/fotoEvent/В классе/8825.jpg'])
+                          .set("biatlon", ["eburg1836a/fotoEvent/Поход на биатлонку/IMG-20160911-WA0007.jpg", "eburg1836a/fotoEvent/Поход на биатлонку/IMG-20160911-WA0015.jpg",
+                               "eburg1836a/fotoEvent/Поход на биатлонку/IMG-20160911-WA0021.jpg", "eburg1836a/fotoEvent/Поход на биатлонку/IMG-20160911-WA0028.jpg",
+                               "eburg1836a/fotoEvent/Поход на биатлонку/IMG-20160911-WA0042.jpg", "eburg1836a/fotoEvent/Поход на биатлонку/IMG-20160911-WA0054.jpg",
+                               "eburg1836a/fotoEvent/Поход на биатлонку/IMG-20160911-WA0057.jpg", "eburg1836a/fotoEvent/Поход на биатлонку/IMG-20160924-WA0002.jpg",
+                               "eburg1836a/fotoEvent/Поход на биатлонку/IMG-20160911-WA0017.jpg"])
+                          .set("travelInPark", ["eburg1836a/fotoEvent/Поход на стлобы/IMG-20171026-WA0016.jpg", "eburg1836a/fotoEvent/Поход на стлобы/IMG-20180308-WA0004.jpg",
+                               "eburg1836a/fotoEvent/Поход на стлобы/IMG-20180308-WA0011.jpg", "eburg1836a/fotoEvent/Поход на стлобы/IMG-20180318-WA0004.jpg",
+                               "eburg1836a/fotoEvent/Поход на стлобы/IMG-20180318-WA0006.jpg", "eburg1836a/fotoEvent/Поход на стлобы/IMG-20180318-WA0020.jpg",
+                               "eburg1836a/fotoEvent/Поход на стлобы/IMG-20180318-WA0026.jpg", "eburg1836a/fotoEvent/Поход на стлобы/IMG-20180318-WA0028.jpg"]);
+        let list_foto_from_event = dict_of_event_foto.get(event_id);
+        full_view_foto = document.querySelector("#full-view-foto>img");
+        full_view_foto.setAttribute("src", list_foto_from_event[0]);
+        for (let path in list_foto_from_event){
+            let foto_img = document.createElement('img');
+            foto_img.className = "img-preview-foto";
+            foto_img.src = list_foto_from_event[path];
+            preview_foto.append(foto_img);
         }
+        let fotogallery_img_preview_foto = document.querySelectorAll(".img-preview-foto");
+        fotogallery_img_preview_foto.forEach((item)=>{
+            item.addEventListener('click', ()=>{
+                full_view_foto = document.querySelector("#full-view-foto>img");
+                img_src = item.getAttribute("src");
+                full_view_foto.setAttribute("src", img_src);
+            });
+        });
     });
 });
 
-fotogallery_img_preview_foto.forEach((item)=>{
-    item.addEventListener('click', ()=>{
-        full_view_foto = document.getElementById("full-view-foto");
-        img_src = item.getAttribute("src");
-        full_view_foto.setAttribute("src", img_src);
-    });
-});
+// fotogallery_img_preview_foto.forEach((item)=>{
+//     item.addEventListener('click', ()=>{
+//         full_view_foto = document.getElementById("full-view-foto");
+//         img_src = item.getAttribute("src");
+//         full_view_foto.setAttribute("src", img_src);
+//     });
+// });
 
 close_fotogallery.addEventListener('click', ()=>{
     let fotogallery = document.getElementById('fotogallery');
     let blackscreen = document.getElementById("blackscreen");
     fotogallery.style.display = 'none';
     blackscreen.style.display = 'none';
+    let preview_foto = document.querySelectorAll("#preview-foto img");
+    preview_foto.forEach((item)=>{
+        item.remove();
+    });
 });
 
 open_archive_button.addEventListener('click', ()=>{

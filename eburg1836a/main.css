@@ -425,15 +425,13 @@ box-shadow: 0px 0px 12px 0px rgba(34, 60, 80, 0.2) inset;
     background-color: rgb(255 255 255 / 70%);
     border-radius: 3vh;
 }
-/* #full-view-foto{
-    background-color: rgb(255 255 255 / 70%);
-    border-radius: 2vh;
+#full-view-foto>img{
+    height: 45vh;
 }
 #fotogallery-text-bottom-foto{
-    background-color: rgb(255 255 255 / 70%);
-    border-radius: 2vh;
-} */
-#fotogallery-preview-foto{
+    width: 55vw;
+}
+#fotogallery-preview-foto{ 
     display: grid;
     grid-area: fotogallery-preview-foto;
     grid-template-rows: 1fr;
@@ -447,7 +445,7 @@ box-shadow: 0px 0px 12px 0px rgba(34, 60, 80, 0.2) inset;
     display: flex;
     overflow: hidden;
     white-space: nowrap;
-    
+    width: 50vw;
 }
 .img-preview-foto{
     border: 0.2vh solid whitesmoke;
@@ -457,6 +455,7 @@ box-shadow: 0px 0px 12px 0px rgba(34, 60, 80, 0.2) inset;
 }
 #fotogallery-preview-foto > #preview-foto img{
     width: 10vw;
+    height: 15vh;
    
 }
 #fotogallery-preview-foto-left, #fotogallery-preview-foto-right{
