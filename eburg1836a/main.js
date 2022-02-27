@@ -13,6 +13,8 @@ let new_order_groupfoto = document.getElementById("new-order-groupfoto");
 let close_order_groupfoto = document.getElementById("close-order-groupfoto");
 let preview_image_archive_foto = document.querySelectorAll(".imagearchivefoto");
 let close_fotogallery = document.getElementById("close-fotogallery");
+let fotogallery_scroll_next_button = document.getElementById("fotogallery-preview-foto-right");
+let fotogallery_scroll_previous_button = document.getElementById("fotogallery-preview-foto-left");
 
 
 function viewName(item){
@@ -107,6 +109,16 @@ preview_image_archive_foto.forEach((item)=>{
             });
         });
     });
+});
+
+fotogallery_scroll_next_button.addEventListener('click', ()=>{
+    fotogallery_preview_foto = document.getElementById("preview-foto");
+    fotogallery_preview_foto.scrollLeft += 50;
+});
+
+fotogallery_scroll_previous_button.addEventListener('click', ()=>{
+    fotogallery_preview_foto = document.getElementById("preview-foto");
+    fotogallery_preview_foto.scrollLeft -= 50;
 });
 
 // fotogallery_img_preview_foto.forEach((item)=>{
